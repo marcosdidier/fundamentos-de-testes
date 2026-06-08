@@ -91,6 +91,13 @@ Tambem foi executada uma repeticao de 10% da base tres vezes para verificar poss
 | `paraphrase` | 228 | 630 | 0.3619 |
 | `punctuation` | 77 | 210 | 0.3667 |
 
+> [!NOTE]
+> A aparente alta taxa de violação (próxima a 36% para todos os tipos de transformação) é uma distorção estatística causada pela estratégia `free` (Livre), que falhou sistematicamente em 100% das vezes devido à falta de formatação JSON. Ao filtrarmos a estratégia `free` e avaliarmos apenas as respostas estruturadas (`strict` e `few_shot`), as taxas de violação real por tipo de transformação caem drasticamente, demonstrando a robustez do LLM às perturbações:
+> * **Capitalização:** 8 violações em 140 execuções (~5,71% de erro real).
+> * **Paráfrase:** 18 violações em 420 execuções (~4,29% de erro real).
+> * **Pontuação:** 7 violações em 140 execuções (~5,00% de erro real).
+
+
 ### Taxa de saida invalida por estrategia
 
 | Estrategia | Saidas invalidas | Denominador | Taxa |
