@@ -1,0 +1,13 @@
+table,group,numerator,denominator,value
+Violation Rate by Prompt Strategy,few_shot,7,350,0.0200
+Violation Rate by Prompt Strategy,free,350,350,1.0000
+Violation Rate by Prompt Strategy,strict,26,350,0.0743
+Violation Rate by Transformation Type,capitalization,78,210,0.3714
+Violation Rate by Transformation Type,paraphrase,228,630,0.3619
+Violation Rate by Transformation Type,punctuation,77,210,0.3667
+Invalid Output Rate by Prompt Strategy,few_shot,0,420,0.0000
+Invalid Output Rate by Prompt Strategy,free,420,420,1.0000
+Invalid Output Rate by Prompt Strategy,strict,0,420,0.0000
+Cost per Detected Violation by Prompt Strategy,few_shot,129011,9,0.0143
+Cost per Detected Violation by Prompt Strategy,free,157711,420,0.0004
+Cost per Detected Violation by Prompt Strategy,strict,79671,31,0.0026

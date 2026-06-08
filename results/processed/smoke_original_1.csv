@@ -1,0 +1,37 @@
+case_id,original_input_id,transformation_type,original_text,transformed_text,expected_label,prompt_strategy,prompt_text,model_name,parameters,raw_output,parsed_label,is_valid_output,is_violation_expected_label,is_prediction_flip,execution_time,estimated_cost,timestamp,manual_review_notes
+orig_refund_request_001,orig_refund_request_001,original,Quero meu dinheiro de volta pelo produto que recebi com defeito.,Quero meu dinheiro de volta pelo produto que recebi com defeito.,refund_request,free,"Leia a mensagem do cliente e identifique qual e a intencao principal.
+Mensagem:
+""Quero meu dinheiro de volta pelo produto que recebi com defeito.""",claude-haiku-4-5,"{""max_tokens"": 64, ""temperature"": 0}","# Análise da Intenção Principal
+
+**Intenção: RECLAMAÇÃO / SOLICITAÇÃO DE REEMBOLSO**
+
+## Detalhes:
+
+- **Tipo de problema:** Produto com defeito
+- **Solicitação específica:**",,False,True,,1.6103630419820547,0.00037299999999999996,2026-06-08T01:01:08.778836+00:00,
+orig_refund_request_001,orig_refund_request_001,original,Quero meu dinheiro de volta pelo produto que recebi com defeito.,Quero meu dinheiro de volta pelo produto que recebi com defeito.,refund_request,strict,"Classifique a intencao da mensagem abaixo.
+Retorne apenas um JSON no seguinte formato:
+{""label"": ""um_dos_rotulos""}
+Rotulos possiveis:
+refund_request, cancel_order, delivery_problem, payment_issue, product_information, account_support, other
+Mensagem:
+""Quero meu dinheiro de volta pelo produto que recebi com defeito.""",claude-haiku-4-5,"{""max_tokens"": 64, ""temperature"": 0}","```json
+{""label"": ""refund_request""}
+```",refund_request,True,False,,0.9028695840388536,0.000192,2026-06-08T01:01:09.681982+00:00,
+orig_refund_request_001,orig_refund_request_001,original,Quero meu dinheiro de volta pelo produto que recebi com defeito.,Quero meu dinheiro de volta pelo produto que recebi com defeito.,refund_request,few_shot,"Classifique a intencao da mensagem abaixo.
+Rotulos possiveis:
+refund_request, cancel_order, delivery_problem, payment_issue, product_information, account_support, other
+Exemplos:
+""Quero meu dinheiro de volta."" -> refund_request
+""Gostaria de cancelar meu pedido."" -> cancel_order
+""Minha entrega ainda nao chegou."" -> delivery_problem
+""Meu pagamento foi recusado."" -> payment_issue
+""Esse produto tem garantia?"" -> product_information
+""Nao consigo acessar minha conta."" -> account_support
+""Obrigado pelo atendimento."" -> other
+Retorne apenas um JSON no seguinte formato:
+{""label"": ""um_dos_rotulos""}
+Mensagem:
+""Quero meu dinheiro de volta pelo produto que recebi com defeito.""",claude-haiku-4-5,"{""max_tokens"": 64, ""temperature"": 0}","```json
+{""label"": ""refund_request""}
+```",refund_request,True,False,,1.3989109169924632,0.00031,2026-06-08T01:01:11.081185+00:00,

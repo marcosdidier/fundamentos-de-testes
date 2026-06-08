@@ -1,0 +1,97 @@
+case_id,original_input_id,transformation_type,expected_label,prompt_strategy,parsed_label,is_valid_output,is_violation_expected_label,is_prediction_flip,failure_category,original_text,transformed_text,raw_output,manual_review_notes,pre_categorization_notes
+orig_other_004,orig_other_004,original,other,strict,account_support,True,True,,ambiguous input,Onde encontro a politica de privacidade do site?,Onde encontro a politica de privacidade do site?,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_006,orig_other_006,original,other,strict,product_information,True,True,,ambiguous input,Vocês atendem lojas parceiras?,Vocês atendem lojas parceiras?,"```json
+{""label"": ""product_information""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_002_paraphrase_03,orig_other_002,paraphrase,other,strict,account_support,True,True,True,label confusion,Quero receber novidades e promocoes da loja.,Gostaria de registrar esta mensagem: quero receber novidades e promocoes da loja.,"```json
+{""label"": ""account_support""}
+```",,Modelo confundiu other com uma categoria especifica sem violar formato de saida.
+orig_other_004_paraphrase_01,orig_other_004,paraphrase,other,strict,account_support,True,True,False,ambiguous input,Onde encontro a politica de privacidade do site?,Minha mensagem para a loja e a seguinte: onde encontro a politica de privacidade do site.,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_004_punctuation_01,orig_other_004,punctuation,other,strict,account_support,True,True,False,ambiguous input,Onde encontro a politica de privacidade do site?,onde encontro a politica de privacidade do site?,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_006_punctuation_01,orig_other_006,punctuation,other,strict,product_information,True,True,False,ambiguous input,Vocês atendem lojas parceiras?,vocês atendem lojas parceiras?,"```json
+{""label"": ""product_information""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_006,orig_other_006,original,other,few_shot,product_information,True,True,,ambiguous input,Vocês atendem lojas parceiras?,Vocês atendem lojas parceiras?,"```json
+{""label"": ""product_information""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_007,orig_other_007,original,other,few_shot,account_support,True,True,,ambiguous input,Como posso falar com a area comercial?,Como posso falar com a area comercial?,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_002_paraphrase_03,orig_other_002,paraphrase,other,few_shot,account_support,True,True,True,label confusion,Quero receber novidades e promocoes da loja.,Gostaria de registrar esta mensagem: quero receber novidades e promocoes da loja.,"```json
+{""label"": ""account_support""}
+```",,Modelo confundiu other com uma categoria especifica sem violar formato de saida.
+orig_other_007_paraphrase_01,orig_other_007,paraphrase,other,few_shot,account_support,True,True,False,ambiguous input,Como posso falar com a area comercial?,Minha mensagem para a loja e a seguinte: como posso falar com a area comercial.,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_006_punctuation_01,orig_other_006,punctuation,other,few_shot,product_information,True,True,False,ambiguous input,Vocês atendem lojas parceiras?,vocês atendem lojas parceiras?,"```json
+{""label"": ""product_information""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_other_007_punctuation_01,orig_other_007,punctuation,other,few_shot,account_support,True,True,False,ambiguous input,Como posso falar com a area comercial?,como posso falar com a area comercial?,"```json
+{""label"": ""account_support""}
+```",,Mensagem rotulada como other pode ser interpretada como pedido de suporte/informacao pela taxonomia do modelo; requer revisao do rotulo esperado.
+orig_refund_request_001,orig_refund_request_001,original,refund_request,free,,False,True,,formatting failure,Quero meu dinheiro de volta pelo produto que recebi com defeito.,Quero meu dinheiro de volta pelo produto que recebi com defeito.,"# Análise da Intenção Principal
+
+**Intenção: RECLAMAÇÃO / SOLICITAÇÃO DE REEMBOLSO**
+
+## Detalhes:
+
+- **Tipo de problema:** Produto com defeito
+- **Solicitação específica:**",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_002,orig_refund_request_002,original,refund_request,free,,False,True,,formatting failure,Gostaria de solicitar o reembolso da minha compra.,Gostaria de solicitar o reembolso da minha compra.,"# Análise da Intenção Principal
+
+**Intenção Principal:** Solicitar reembolso/devolução de compra
+
+## Detalhes:
+- **Tipo de solicitação:** Financeira/Administrativa
+- **Ação desejada",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_001_paraphrase_01,orig_refund_request_001,paraphrase,refund_request,free,,False,True,,formatting failure,Quero meu dinheiro de volta pelo produto que recebi com defeito.,"Preciso que a loja providencie a devolucao do valor, pois quero meu dinheiro de volta pelo produto que recebi com defeito.","# Análise da Intenção Principal
+
+**Intenção Principal:** Solicitar **reembolso/devolução de valor**
+
+## Detalhes:
+
+- **Motivo:** Produto recebido com defeito
+- **Ação desejada",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_001_paraphrase_02,orig_refund_request_001,paraphrase,refund_request,free,,False,True,,formatting failure,Quero meu dinheiro de volta pelo produto que recebi com defeito.,Estou pedindo reembolso porque quero meu dinheiro de volta pelo produto que recebi com defeito.,"# Análise da Intenção Principal
+
+**Intenção Principal:** Solicitar reembolso
+
+**Motivo:** Produto recebido com defeito
+
+**Detalhes:**
+- O cliente deseja recuperar o valor pago
+- Justifica a",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_001_punctuation_01,orig_refund_request_001,punctuation,refund_request,free,,False,True,,formatting failure,Quero meu dinheiro de volta pelo produto que recebi com defeito.,quero meu dinheiro de volta pelo produto que recebi com defeito...,"# Análise da Intenção Principal
+
+**Intenção Identificada: RECLAMAÇÃO / SOLICITAÇÃO DE REEMBOLSO**
+
+## Detalhes:
+
+- **Tipo de problema:** Produto com defeito
+- **Solicitação do",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_002_punctuation_01,orig_refund_request_002,punctuation,refund_request,free,,False,True,,formatting failure,Gostaria de solicitar o reembolso da minha compra.,gostaria de solicitar o reembolso da minha compra...,"# Análise da Intenção Principal
+
+**Intenção Identificada:** Solicitar reembolso/devolução
+
+A mensagem do cliente expressa claramente o desejo de obter o reembolso de uma compra realizada. Esta é uma solicit",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_001_capitalization_01,orig_refund_request_001,capitalization,refund_request,free,,False,True,,formatting failure,Quero meu dinheiro de volta pelo produto que recebi com defeito.,QUERO MEU DINHEIRO DE VOLTA PELO PRODUTO QUE RECEBI COM DEFEITO.,"# Análise da Intenção Principal
+
+**Intenção Identificada:** **REEMBOLSO / DEVOLUÇÃO**
+
+## Detalhes:
+
+- **Tipo de Problema:** Produto com defeito
+- **Solicitação:** Reem",,Saida nao seguiu o contrato esperado de JSON com label valido.
+orig_refund_request_002_capitalization_01,orig_refund_request_002,capitalization,refund_request,free,,False,True,,formatting failure,Gostaria de solicitar o reembolso da minha compra.,gostaria de solicitar o reembolso da minha compra.,"# Análise da Intenção Principal
+
+**Intenção Principal:** Solicitar reembolso/devolução de compra
+
+**Detalhes:**
+- O cliente deseja recuperar o valor pago por uma compra realizada
+- Trata-se",,Saida nao seguiu o contrato esperado de JSON com label valido.

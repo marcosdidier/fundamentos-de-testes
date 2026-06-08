@@ -1,0 +1,7 @@
+field,value
+executions,1260
+unique_cases,420
+total_api_cost,0.36639599999999998813
+total_violations_expected_label,460
+total_invalid_outputs,420
+average_response_time,1.3647804884914962
