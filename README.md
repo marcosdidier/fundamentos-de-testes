@@ -70,25 +70,30 @@ cp .env.example .env
 
 Preencha `ANTHROPIC_API_KEY` no `.env`.
 
-Validacao local:
-
+### Validação Local (Testes)
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests
 ```
 
-Coleta completa:
+### Reprodução dos Experimentos (v1 e v2)
 
-```bash
-PYTHONPATH=src python3 scripts/run_experiment.py --dataset all
-```
+1. **Gerar Datasets Transformados (v1 e v2):**
+   ```bash
+   python3 scripts/generate_transformed_dataset.py --version all
+   ```
 
-Metricas:
+2. **Executar Coleta Completa (v2 - Padrão/Recomendado):**
+   ```bash
+   PYTHONPATH=src python3 scripts/run_experiment.py --version v2 --dataset all
+   ```
+   *(Para rodar o Experimento v1 original: `PYTHONPATH=src python3 scripts/run_experiment.py --version v1 --dataset all`)*
 
-```bash
-PYTHONPATH=src python3 scripts/calculate_metrics.py
-```
+3. **Gerar Relatórios de Análise e Tabelas:**
+   ```bash
+   PYTHONPATH=src python3 scripts/analyze_experiments.py
+   ```
 
-Instrucoes completas estao em `docs/reproducao.md`.
+Instrucoes completas estao em [reproducao.md](file:///c:/Users/walte/OneDrive/Desktop/faculdade/fundamentos_software/fundamentos-de-testes/docs/reproducao.md).
 
 ## Documentacao
 

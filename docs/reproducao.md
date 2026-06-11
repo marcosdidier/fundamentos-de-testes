@@ -24,18 +24,20 @@ ANTHROPIC_MAX_TOKENS=64
 PYTHONPATH=src python3 -m unittest discover -s tests
 ```
 
-## Gerar datasets transformados
+## Gerar datasets transformados (v1 e v2)
 
-```bash
-python3 scripts/generate_transformed_dataset.py
-```
+Para gerar os datasets transformados:
+*   **v1 (prefixos mecânicos):** `python3 scripts/generate_transformed_dataset.py --version v1`
+*   **v2 (paráfrases por IA):** `python3 scripts/generate_transformed_dataset.py --version v2`
+*   **Ambos (Padrão):** `python3 scripts/generate_transformed_dataset.py --version all`
 
-## Smoke test com API
+## Smoke test com API (v2)
 
-Executa 1 caso original com as 3 estrategias:
+Executa 1 caso original com as estratégias estruturadas (`strict` e `few_shot`):
 
 ```bash
 PYTHONPATH=src python3 scripts/run_experiment.py \
+  --version v2 \
   --dataset original \
   --limit 1 \
   --csv-output results/processed/smoke_original_1.csv \
@@ -44,16 +46,21 @@ PYTHONPATH=src python3 scripts/run_experiment.py \
 
 ## Coleta completa
 
-Executa 420 casos com 3 estrategias, totalizando 1260 chamadas:
+Para executar a coleta completa de um experimento (original + transformados):
 
+### Experimento v2 (Recomendado - Sem `free`)
+Executa 420 casos de teste com as estratégias `strict` e `few_shot`, totalizando 840 execuções:
 ```bash
-PYTHONPATH=src python3 scripts/run_experiment.py \
-  --dataset all \
-  --csv-output results/processed/full_execution_results.csv \
-  --jsonl-output results/raw/full_execution_logs.jsonl
+PYTHONPATH=src python3 scripts/run_experiment.py --version v2 --dataset all
 ```
 
-## Repeticao de 10%
+### Experimento v1 (Original - Inclui `free`)
+Executa 420 casos de teste com as estratégias `free`, `strict` e `few_shot`, totalizando 1260 execuções:
+```bash
+PYTHONPATH=src python3 scripts/run_experiment.py --version v1 --dataset all
+```
+
+## Repetição de 10% (v1)
 
 ```bash
 PYTHONPATH=src python3 scripts/run_repetition_check.py \
@@ -61,28 +68,35 @@ PYTHONPATH=src python3 scripts/run_repetition_check.py \
   --jsonl-output results/raw/repetition_check_logs.jsonl
 ```
 
-## Calcular metricas
+## Gerar Métricas e Relatórios de Análise (v2)
+
+Para calcular todas as métricas detalhadas, tabelas de visualização, relatórios de comparação de performance e análise qualitativa de falhas para a v2, execute:
+
+```bash
+PYTHONPATH=src python3 scripts/analyze_experiments.py
+```
+
+Saídas geradas:
+*   `data/transformed/transformed_dataset_v2_visualizacao.md` (Tabela visual do dataset v2)
+*   `results/processed/comparison_v1_v2.md` (Comparativo de métricas v1 vs v2)
+*   `results/processed/failure_analysis_report.md` (Análise de causa raiz de erros)
+
+---
+
+## Métricas e Artefatos do Experimento v1 (Legado)
+
+Para rodar o pipeline legado de análise de métricas da v1:
 
 ```bash
 PYTHONPATH=src python3 scripts/calculate_metrics.py
-```
-
-Saidas:
-
-- `results/processed/summary.csv`
-- `results/processed/metrics.csv`
-
-## Gerar artefatos de analise
-
-```bash
 PYTHONPATH=src python3 scripts/generate_analysis_artifacts.py
 ```
 
-Saidas:
-
-- `results/processed/analysis_tables.md`
-- `results/processed/analysis_tables.csv`
-- `results/processed/representative_failures.csv`
+Saídas:
+*   `results/processed/metrics.csv`
+*   `results/processed/summary.csv`
+*   `results/processed/analysis_tables.md`
+*   `results/processed/representative_failures.csv`
 
 ## Pre-categorizar falhas
 
