@@ -55,3 +55,13 @@ Este documento lista os principais artefatos produzidos no projeto.
 | Guia de reproducao | `docs/reproducao.md` | Comandos para reproduzir o experimento. |
 | README | `README.md` | Visao geral do projeto e instrucoes basicas. |
 
+## Apresentação
+
+| Artefato | Caminho | Descricao |
+| --- | --- | --- |
+| Guia de Estudo | `apresentacao/estudo_apresentacao.md` | Guia completo estruturado em perguntas e respostas para estudo da apresentação de aula. |
+| Slides (Markdown) | `apresentacao/slides_apresentacao.md` | Slides em Markdown compatíveis com Marp. |
+| Slides (HTML) | `apresentacao/slides_apresentacao.html` | Slides interativos em formato web/HTML com animações. |
+| Slides (PDF) | `apresentacao/slides_apresentacao.pdf` | Slides compilados em formato PDF prontos para apresentação. |
+
+
