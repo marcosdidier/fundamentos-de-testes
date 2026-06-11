@@ -1,0 +1,356 @@
+# Visualização do Dataset Transformado v2
+
+Esta tabela contém os 350 casos de teste gerados para a v2.
+
+| ID do Caso | Tipo de Transformação | Texto Original | Texto Transformado | Rótulo Esperado |
+| :--- | :--- | :--- | :--- | :--- |
+| `orig_refund_request_001_paraphrase_01` | `paraphrase` | Quero meu dinheiro de volta pelo produto que recebi com defeito. | **Como o produto que chegou veio com defeito, exijo a devolução do meu dinheiro.** | `refund_request` |
+| `orig_refund_request_001_paraphrase_02` | `paraphrase` | Quero meu dinheiro de volta pelo produto que recebi com defeito. | **Solicito o estorno do valor pago, pois recebi o item danificado.** | `refund_request` |
+| `orig_refund_request_001_paraphrase_03` | `paraphrase` | Quero meu dinheiro de volta pelo produto que recebi com defeito. | **O artigo entregue está quebrado e eu gostaria de reaver o pagamento.** | `refund_request` |
+| `orig_refund_request_001_punctuation_01` | `punctuation` | Quero meu dinheiro de volta pelo produto que recebi com defeito. | **quero meu dinheiro de volta pelo produto que recebi com defeito...** | `refund_request` |
+| `orig_refund_request_001_capitalization_01` | `capitalization` | Quero meu dinheiro de volta pelo produto que recebi com defeito. | **QUERO MEU DINHEIRO DE VOLTA PELO PRODUTO QUE RECEBI COM DEFEITO.** | `refund_request` |
+| `orig_refund_request_002_paraphrase_01` | `paraphrase` | Gostaria de solicitar o reembolso da minha compra. | **Peço que façam o reembolso do valor referente à compra que realizei.** | `refund_request` |
+| `orig_refund_request_002_paraphrase_02` | `paraphrase` | Gostaria de solicitar o reembolso da minha compra. | **Quero pedir a devolução do dinheiro pago nesta transação.** | `refund_request` |
+| `orig_refund_request_002_paraphrase_03` | `paraphrase` | Gostaria de solicitar o reembolso da minha compra. | **Por favor, deem início ao processo de estorno do meu pedido.** | `refund_request` |
+| `orig_refund_request_002_punctuation_01` | `punctuation` | Gostaria de solicitar o reembolso da minha compra. | **gostaria de solicitar o reembolso da minha compra...** | `refund_request` |
+| `orig_refund_request_002_capitalization_01` | `capitalization` | Gostaria de solicitar o reembolso da minha compra. | **gostaria de solicitar o reembolso da minha compra.** | `refund_request` |
+| `orig_refund_request_003_paraphrase_01` | `paraphrase` | Comprei ontem e preciso receber o valor de volta. | **Fiz o pedido ontem, mas agora preciso do estorno do pagamento.** | `refund_request` |
+| `orig_refund_request_003_paraphrase_02` | `paraphrase` | Comprei ontem e preciso receber o valor de volta. | **Realizei uma compra ontem e gostaria de solicitar a devolução do dinheiro.** | `refund_request` |
+| `orig_refund_request_003_paraphrase_03` | `paraphrase` | Comprei ontem e preciso receber o valor de volta. | **Preciso recuperar o dinheiro da compra que efetuei no dia de ontem.** | `refund_request` |
+| `orig_refund_request_003_punctuation_01` | `punctuation` | Comprei ontem e preciso receber o valor de volta. | **comprei ontem e preciso receber o valor de volta...** | `refund_request` |
+| `orig_refund_request_003_capitalization_01` | `capitalization` | Comprei ontem e preciso receber o valor de volta. | **COMPREI ontem E preciso RECEBER o VALOR de VOLTA.** | `refund_request` |
+| `orig_refund_request_004_paraphrase_01` | `paraphrase` | Podem devolver o dinheiro que paguei nesse pedido? | **Vocês poderiam estornar o valor cobrado por este pedido?** | `refund_request` |
+| `orig_refund_request_004_paraphrase_02` | `paraphrase` | Podem devolver o dinheiro que paguei nesse pedido? | **Existe a possibilidade de devolverem o montante que paguei nesta compra?** | `refund_request` |
+| `orig_refund_request_004_paraphrase_03` | `paraphrase` | Podem devolver o dinheiro que paguei nesse pedido? | **Gostaria de saber se posso ter meu dinheiro de volta por este item.** | `refund_request` |
+| `orig_refund_request_004_punctuation_01` | `punctuation` | Podem devolver o dinheiro que paguei nesse pedido? | **podem devolver o dinheiro que paguei nesse pedido?** | `refund_request` |
+| `orig_refund_request_004_capitalization_01` | `capitalization` | Podem devolver o dinheiro que paguei nesse pedido? | **PODEM DEVOLVER O DINHEIRO QUE PAGUEI NESSE PEDIDO?** | `refund_request` |
+| `orig_refund_request_005_paraphrase_01` | `paraphrase` | O item veio errado e quero o reembolso. | **Entregaram o produto incorreto e por isso exijo o reembolso do valor.** | `refund_request` |
+| `orig_refund_request_005_paraphrase_02` | `paraphrase` | O item veio errado e quero o reembolso. | **Como o artigo que chegou não foi o que pedi, quero meu dinheiro de volta.** | `refund_request` |
+| `orig_refund_request_005_paraphrase_03` | `paraphrase` | O item veio errado e quero o reembolso. | **Solicito o estorno do pagamento, pois o produto enviado veio errado.** | `refund_request` |
+| `orig_refund_request_005_punctuation_01` | `punctuation` | O item veio errado e quero o reembolso. | **o item veio errado e quero o reembolso...** | `refund_request` |
+| `orig_refund_request_005_capitalization_01` | `capitalization` | O item veio errado e quero o reembolso. | **o item veio errado e quero o reembolso.** | `refund_request` |
+| `orig_refund_request_006_paraphrase_01` | `paraphrase` | Preciso abrir uma solicitacao para receber meu pagamento de volta. | **Gostaria de abrir um chamado para reaver o dinheiro pago.** | `refund_request` |
+| `orig_refund_request_006_paraphrase_02` | `paraphrase` | Preciso abrir uma solicitacao para receber meu pagamento de volta. | **Onde posso solicitar a devolução do valor da minha compra?** | `refund_request` |
+| `orig_refund_request_006_paraphrase_03` | `paraphrase` | Preciso abrir uma solicitacao para receber meu pagamento de volta. | **Preciso dar entrada no pedido de reembolso do meu pagamento.** | `refund_request` |
+| `orig_refund_request_006_punctuation_01` | `punctuation` | Preciso abrir uma solicitacao para receber meu pagamento de volta. | **preciso abrir uma solicitacao para receber meu pagamento de volta...** | `refund_request` |
+| `orig_refund_request_006_capitalization_01` | `capitalization` | Preciso abrir uma solicitacao para receber meu pagamento de volta. | **PRECISO abrir UMA solicitacao PARA receber MEU pagamento DE volta.** | `refund_request` |
+| `orig_refund_request_007_paraphrase_01` | `paraphrase` | Nao fiquei satisfeito com a compra e quero a devolucao do valor. | **O produto não atendeu às minhas expectativas e desejo o dinheiro de volta.** | `refund_request` |
+| `orig_refund_request_007_paraphrase_02` | `paraphrase` | Nao fiquei satisfeito com a compra e quero a devolucao do valor. | **Como não gostei da compra, solicito o estorno do pagamento.** | `refund_request` |
+| `orig_refund_request_007_paraphrase_03` | `paraphrase` | Nao fiquei satisfeito com a compra e quero a devolucao do valor. | **Não me agradei com o item recebido e quero a restituição do valor pago.** | `refund_request` |
+| `orig_refund_request_007_punctuation_01` | `punctuation` | Nao fiquei satisfeito com a compra e quero a devolucao do valor. | **nao fiquei satisfeito com a compra e quero a devolucao do valor...** | `refund_request` |
+| `orig_refund_request_007_capitalization_01` | `capitalization` | Nao fiquei satisfeito com a compra e quero a devolucao do valor. | **NAO FIQUEI SATISFEITO COM A COMPRA E QUERO A DEVOLUCAO DO VALOR.** | `refund_request` |
+| `orig_refund_request_008_paraphrase_01` | `paraphrase` | Como faco para pedir reembolso desse produto? | **Qual é o procedimento para solicitar o estorno do valor deste item?** | `refund_request` |
+| `orig_refund_request_008_paraphrase_02` | `paraphrase` | Como faco para pedir reembolso desse produto? | **Como posso obter a devolução do dinheiro pago por este produto?** | `refund_request` |
+| `orig_refund_request_008_paraphrase_03` | `paraphrase` | Como faco para pedir reembolso desse produto? | **Poderiam me orientar sobre como pedir o reembolso dessa mercadoria?** | `refund_request` |
+| `orig_refund_request_008_punctuation_01` | `punctuation` | Como faco para pedir reembolso desse produto? | **como faco para pedir reembolso desse produto?** | `refund_request` |
+| `orig_refund_request_008_capitalization_01` | `capitalization` | Como faco para pedir reembolso desse produto? | **como faco para pedir reembolso desse produto?** | `refund_request` |
+| `orig_refund_request_009_paraphrase_01` | `paraphrase` | O pedido chegou quebrado e desejo meu dinheiro de volta. | **Minha encomenda veio danificada e quero a devolução imediata do valor.** | `refund_request` |
+| `orig_refund_request_009_paraphrase_02` | `paraphrase` | O pedido chegou quebrado e desejo meu dinheiro de volta. | **Solicito reembolso total, pois o produto chegou quebrado na minha casa.** | `refund_request` |
+| `orig_refund_request_009_paraphrase_03` | `paraphrase` | O pedido chegou quebrado e desejo meu dinheiro de volta. | **O item entregue está avariado e gostaria de ter meu dinheiro de volta.** | `refund_request` |
+| `orig_refund_request_009_punctuation_01` | `punctuation` | O pedido chegou quebrado e desejo meu dinheiro de volta. | **o pedido chegou quebrado e desejo meu dinheiro de volta...** | `refund_request` |
+| `orig_refund_request_009_capitalization_01` | `capitalization` | O pedido chegou quebrado e desejo meu dinheiro de volta. | **O pedido CHEGOU quebrado E desejo MEU dinheiro DE volta.** | `refund_request` |
+| `orig_refund_request_010_paraphrase_01` | `paraphrase` | Solicito a devolucao do valor pago na minha ultima compra. | **Quero requerer a restituição do dinheiro da minha compra mais recente.** | `refund_request` |
+| `orig_refund_request_010_paraphrase_02` | `paraphrase` | Solicito a devolucao do valor pago na minha ultima compra. | **Por favor, providenciem o estorno do pagamento do meu último pedido.** | `refund_request` |
+| `orig_refund_request_010_paraphrase_03` | `paraphrase` | Solicito a devolucao do valor pago na minha ultima compra. | **Solicito a devolução do montante cobrado na transação anterior.** | `refund_request` |
+| `orig_refund_request_010_punctuation_01` | `punctuation` | Solicito a devolucao do valor pago na minha ultima compra. | **solicito a devolucao do valor pago na minha ultima compra...** | `refund_request` |
+| `orig_refund_request_010_capitalization_01` | `capitalization` | Solicito a devolucao do valor pago na minha ultima compra. | **SOLICITO A DEVOLUCAO DO VALOR PAGO NA MINHA ULTIMA COMPRA.** | `refund_request` |
+| `orig_cancel_order_001_paraphrase_01` | `paraphrase` | Quero cancelar meu pedido. | **Desejo efetuar o cancelamento da minha compra.** | `cancel_order` |
+| `orig_cancel_order_001_paraphrase_02` | `paraphrase` | Quero cancelar meu pedido. | **Por favor, cancelem o pedido que realizei.** | `cancel_order` |
+| `orig_cancel_order_001_paraphrase_03` | `paraphrase` | Quero cancelar meu pedido. | **Gostaria de solicitar a anulação da minha encomenda.** | `cancel_order` |
+| `orig_cancel_order_001_punctuation_01` | `punctuation` | Quero cancelar meu pedido. | **quero cancelar meu pedido...** | `cancel_order` |
+| `orig_cancel_order_001_capitalization_01` | `capitalization` | Quero cancelar meu pedido. | **quero cancelar meu pedido.** | `cancel_order` |
+| `orig_cancel_order_002_paraphrase_01` | `paraphrase` | Gostaria de cancelar a compra que acabei de fazer. | **Quero cancelar o pedido que fiz há poucos instantes.** | `cancel_order` |
+| `orig_cancel_order_002_paraphrase_02` | `paraphrase` | Gostaria de cancelar a compra que acabei de fazer. | **Acabei de realizar uma compra, mas mudei de ideia e quero cancelá-la.** | `cancel_order` |
+| `orig_cancel_order_002_paraphrase_03` | `paraphrase` | Gostaria de cancelar a compra que acabei de fazer. | **Por favor, suspendam a transação que acabei de concluir.** | `cancel_order` |
+| `orig_cancel_order_002_punctuation_01` | `punctuation` | Gostaria de cancelar a compra que acabei de fazer. | **gostaria de cancelar a compra que acabei de fazer...** | `cancel_order` |
+| `orig_cancel_order_002_capitalization_01` | `capitalization` | Gostaria de cancelar a compra que acabei de fazer. | **GOSTARIA de CANCELAR a COMPRA que ACABEI de FAZER.** | `cancel_order` |
+| `orig_cancel_order_003_paraphrase_01` | `paraphrase` | Ainda da tempo de cancelar meu pedido? | **Consigo cancelar a minha compra a essa altura?** | `cancel_order` |
+| `orig_cancel_order_003_paraphrase_02` | `paraphrase` | Ainda da tempo de cancelar meu pedido? | **Gostaria de saber se o meu pedido já foi enviado ou se ainda posso cancelar.** | `cancel_order` |
+| `orig_cancel_order_003_paraphrase_03` | `paraphrase` | Ainda da tempo de cancelar meu pedido? | **Será que é possível solicitar a suspensão do pedido agora?** | `cancel_order` |
+| `orig_cancel_order_003_punctuation_01` | `punctuation` | Ainda da tempo de cancelar meu pedido? | **ainda da tempo de cancelar meu pedido?** | `cancel_order` |
+| `orig_cancel_order_003_capitalization_01` | `capitalization` | Ainda da tempo de cancelar meu pedido? | **AINDA DA TEMPO DE CANCELAR MEU PEDIDO?** | `cancel_order` |
+| `orig_cancel_order_004_paraphrase_01` | `paraphrase` | Por favor cancelem a minha compra antes do envio. | **Peço que cancelem meu pedido antes que a transportadora o recolha.** | `cancel_order` |
+| `orig_cancel_order_004_paraphrase_02` | `paraphrase` | Por favor cancelem a minha compra antes do envio. | **Favor suspender a compra antes de despacharem o produto.** | `cancel_order` |
+| `orig_cancel_order_004_paraphrase_03` | `paraphrase` | Por favor cancelem a minha compra antes do envio. | **Gostaria de cancelar a encomenda antes que seja feito o envio.** | `cancel_order` |
+| `orig_cancel_order_004_punctuation_01` | `punctuation` | Por favor cancelem a minha compra antes do envio. | **por favor cancelem a minha compra antes do envio...** | `cancel_order` |
+| `orig_cancel_order_004_capitalization_01` | `capitalization` | Por favor cancelem a minha compra antes do envio. | **por favor cancelem a minha compra antes do envio.** | `cancel_order` |
+| `orig_cancel_order_005_paraphrase_01` | `paraphrase` | Preciso desistir do pedido feito hoje. | **Quero desistir da compra que realizei na data de hoje.** | `cancel_order` |
+| `orig_cancel_order_005_paraphrase_02` | `paraphrase` | Preciso desistir do pedido feito hoje. | **Solicito o cancelamento da encomenda efetuada hoje mais cedo.** | `cancel_order` |
+| `orig_cancel_order_005_paraphrase_03` | `paraphrase` | Preciso desistir do pedido feito hoje. | **Preciso anular a transação que fiz no dia de hoje.** | `cancel_order` |
+| `orig_cancel_order_005_punctuation_01` | `punctuation` | Preciso desistir do pedido feito hoje. | **preciso desistir do pedido feito hoje...** | `cancel_order` |
+| `orig_cancel_order_005_capitalization_01` | `capitalization` | Preciso desistir do pedido feito hoje. | **PRECISO desistir DO pedido FEITO hoje.** | `cancel_order` |
+| `orig_cancel_order_006_paraphrase_01` | `paraphrase` | Nao quero mais esse produto e desejo cancelar o pedido. | **Perdi o interesse no item e gostaria de suspender a compra.** | `cancel_order` |
+| `orig_cancel_order_006_paraphrase_02` | `paraphrase` | Nao quero mais esse produto e desejo cancelar o pedido. | **Decidi que não vou ficar com o produto, então cancelem o pedido por favor.** | `cancel_order` |
+| `orig_cancel_order_006_paraphrase_03` | `paraphrase` | Nao quero mais esse produto e desejo cancelar o pedido. | **Como não pretendo mais ficar com a mercadoria, solicito a anulação da ordem.** | `cancel_order` |
+| `orig_cancel_order_006_punctuation_01` | `punctuation` | Nao quero mais esse produto e desejo cancelar o pedido. | **nao quero mais esse produto e desejo cancelar o pedido...** | `cancel_order` |
+| `orig_cancel_order_006_capitalization_01` | `capitalization` | Nao quero mais esse produto e desejo cancelar o pedido. | **NAO QUERO MAIS ESSE PRODUTO E DESEJO CANCELAR O PEDIDO.** | `cancel_order` |
+| `orig_cancel_order_007_paraphrase_01` | `paraphrase` | Como faco para interromper a compra antes de ser entregue? | **Qual é o procedimento para suspender o envio antes da entrega da mercadoria?** | `cancel_order` |
+| `orig_cancel_order_007_paraphrase_02` | `paraphrase` | Como faco para interromper a compra antes de ser entregue? | **Como posso cancelar o pedido antes que ele chegue ao meu endereço?** | `cancel_order` |
+| `orig_cancel_order_007_paraphrase_03` | `paraphrase` | Como faco para interromper a compra antes de ser entregue? | **Gostaria de barrar a entrega e cancelar a compra, o que devo fazer?** | `cancel_order` |
+| `orig_cancel_order_007_punctuation_01` | `punctuation` | Como faco para interromper a compra antes de ser entregue? | **como faco para interromper a compra antes de ser entregue?** | `cancel_order` |
+| `orig_cancel_order_007_capitalization_01` | `capitalization` | Como faco para interromper a compra antes de ser entregue? | **como faco para interromper a compra antes de ser entregue?** | `cancel_order` |
+| `orig_cancel_order_008_paraphrase_01` | `paraphrase` | Cancele o pedido numero 4587 por favor. | **Por favor, façam a suspensão da compra de código 4587.** | `cancel_order` |
+| `orig_cancel_order_008_paraphrase_02` | `paraphrase` | Cancele o pedido numero 4587 por favor. | **Desejo anular o pedido número 4587.** | `cancel_order` |
+| `orig_cancel_order_008_paraphrase_03` | `paraphrase` | Cancele o pedido numero 4587 por favor. | **Solicito o cancelamento imediato da encomenda 4587.** | `cancel_order` |
+| `orig_cancel_order_008_punctuation_01` | `punctuation` | Cancele o pedido numero 4587 por favor. | **cancele o pedido numero 4587 por favor...** | `cancel_order` |
+| `orig_cancel_order_008_capitalization_01` | `capitalization` | Cancele o pedido numero 4587 por favor. | **CANCELE o PEDIDO numero 4587 por FAVOR.** | `cancel_order` |
+| `orig_cancel_order_009_paraphrase_01` | `paraphrase` | Fiz uma compra por engano e quero cancelar. | **Efetuei o pedido acidentalmente e gostaria de cancelá-lo.** | `cancel_order` |
+| `orig_cancel_order_009_paraphrase_02` | `paraphrase` | Fiz uma compra por engano e quero cancelar. | **Comprei o item errado sem querer e preciso suspender a transação.** | `cancel_order` |
+| `orig_cancel_order_009_paraphrase_03` | `paraphrase` | Fiz uma compra por engano e quero cancelar. | **Por engano acabei fazendo uma compra e agora peço o cancelamento.** | `cancel_order` |
+| `orig_cancel_order_009_punctuation_01` | `punctuation` | Fiz uma compra por engano e quero cancelar. | **fiz uma compra por engano e quero cancelar...** | `cancel_order` |
+| `orig_cancel_order_009_capitalization_01` | `capitalization` | Fiz uma compra por engano e quero cancelar. | **FIZ UMA COMPRA POR ENGANO E QUERO CANCELAR.** | `cancel_order` |
+| `orig_cancel_order_010_paraphrase_01` | `paraphrase` | Solicito o cancelamento da minha ultima compra. | **Gostaria de pedir a anulação do meu pedido mais recente.** | `cancel_order` |
+| `orig_cancel_order_010_paraphrase_02` | `paraphrase` | Solicito o cancelamento da minha ultima compra. | **Favor realizar o cancelamento da última compra que registrei.** | `cancel_order` |
+| `orig_cancel_order_010_paraphrase_03` | `paraphrase` | Solicito o cancelamento da minha ultima compra. | **Desejo cancelar o pedido efetuado por último.** | `cancel_order` |
+| `orig_cancel_order_010_punctuation_01` | `punctuation` | Solicito o cancelamento da minha ultima compra. | **solicito o cancelamento da minha ultima compra...** | `cancel_order` |
+| `orig_cancel_order_010_capitalization_01` | `capitalization` | Solicito o cancelamento da minha ultima compra. | **solicito o cancelamento da minha ultima compra.** | `cancel_order` |
+| `orig_delivery_problem_001_paraphrase_01` | `paraphrase` | Minha entrega ainda nao chegou. | **O produto que comprei ainda não foi entregue.** | `delivery_problem` |
+| `orig_delivery_problem_001_paraphrase_02` | `paraphrase` | Minha entrega ainda nao chegou. | **A encomenda que estou esperando ainda não chegou no meu endereço.** | `delivery_problem` |
+| `orig_delivery_problem_001_paraphrase_03` | `paraphrase` | Minha entrega ainda nao chegou. | **Continuo no aguardo da entrega do meu pedido.** | `delivery_problem` |
+| `orig_delivery_problem_001_punctuation_01` | `punctuation` | Minha entrega ainda nao chegou. | **minha entrega ainda nao chegou...** | `delivery_problem` |
+| `orig_delivery_problem_001_capitalization_01` | `capitalization` | Minha entrega ainda nao chegou. | **MINHA entrega AINDA nao CHEGOU.** | `delivery_problem` |
+| `orig_delivery_problem_002_paraphrase_01` | `paraphrase` | O rastreio do meu pedido nao atualiza ha varios dias. | **Faz dias que o código de rastreamento da minha compra não mostra movimentação.** | `delivery_problem` |
+| `orig_delivery_problem_002_paraphrase_02` | `paraphrase` | O rastreio do meu pedido nao atualiza ha varios dias. | **O status de envio do produto está paralisado há bastante tempo.** | `delivery_problem` |
+| `orig_delivery_problem_002_paraphrase_03` | `paraphrase` | O rastreio do meu pedido nao atualiza ha varios dias. | **Não vejo atualizações no rastreio da minha encomenda já faz alguns dias.** | `delivery_problem` |
+| `orig_delivery_problem_002_punctuation_01` | `punctuation` | O rastreio do meu pedido nao atualiza ha varios dias. | **o rastreio do meu pedido nao atualiza ha varios dias...** | `delivery_problem` |
+| `orig_delivery_problem_002_capitalization_01` | `capitalization` | O rastreio do meu pedido nao atualiza ha varios dias. | **O RASTREIO DO MEU PEDIDO NAO ATUALIZA HA VARIOS DIAS.** | `delivery_problem` |
+| `orig_delivery_problem_003_paraphrase_01` | `paraphrase` | Meu pacote aparece como entregue mas eu nao recebi nada. | **No sistema diz que o pedido foi entregue, porém não recebi a mercadoria.** | `delivery_problem` |
+| `orig_delivery_problem_003_paraphrase_02` | `paraphrase` | Meu pacote aparece como entregue mas eu nao recebi nada. | **Consta como entregue o produto, mas a entrega não foi realizada para mim.** | `delivery_problem` |
+| `orig_delivery_problem_003_paraphrase_03` | `paraphrase` | Meu pacote aparece como entregue mas eu nao recebi nada. | **O rastreamento aponta que a encomenda chegou, mas meu pacote não está aqui.** | `delivery_problem` |
+| `orig_delivery_problem_003_punctuation_01` | `punctuation` | Meu pacote aparece como entregue mas eu nao recebi nada. | **meu pacote aparece como entregue mas eu nao recebi nada...** | `delivery_problem` |
+| `orig_delivery_problem_003_capitalization_01` | `capitalization` | Meu pacote aparece como entregue mas eu nao recebi nada. | **meu pacote aparece como entregue mas eu nao recebi nada.** | `delivery_problem` |
+| `orig_delivery_problem_004_paraphrase_01` | `paraphrase` | A entrega esta atrasada e preciso saber o que aconteceu. | **Gostaria de uma explicação sobre o atraso no envio do meu pedido.** | `delivery_problem` |
+| `orig_delivery_problem_004_paraphrase_02` | `paraphrase` | A entrega esta atrasada e preciso saber o que aconteceu. | **O prazo estourou e necessito de informações sobre o paradeiro da minha entrega.** | `delivery_problem` |
+| `orig_delivery_problem_004_paraphrase_03` | `paraphrase` | A entrega esta atrasada e preciso saber o que aconteceu. | **Preciso de esclarecimentos porque o produto está atrasado.** | `delivery_problem` |
+| `orig_delivery_problem_004_punctuation_01` | `punctuation` | A entrega esta atrasada e preciso saber o que aconteceu. | **a entrega esta atrasada e preciso saber o que aconteceu...** | `delivery_problem` |
+| `orig_delivery_problem_004_capitalization_01` | `capitalization` | A entrega esta atrasada e preciso saber o que aconteceu. | **A entrega ESTA atrasada E preciso SABER o QUE aconteceu.** | `delivery_problem` |
+| `orig_delivery_problem_005_paraphrase_01` | `paraphrase` | O entregador nao encontrou meu endereco e o pedido voltou. | **A transportadora alegou endereço não localizado e a encomenda retornou.** | `delivery_problem` |
+| `orig_delivery_problem_005_paraphrase_02` | `paraphrase` | O entregador nao encontrou meu endereco e o pedido voltou. | **O pacote está voltando para a loja porque não acharam a minha residência.** | `delivery_problem` |
+| `orig_delivery_problem_005_paraphrase_03` | `paraphrase` | O entregador nao encontrou meu endereco e o pedido voltou. | **Houve insucesso na entrega por falta de localização do endereço, e o pedido foi devolvido.** | `delivery_problem` |
+| `orig_delivery_problem_005_punctuation_01` | `punctuation` | O entregador nao encontrou meu endereco e o pedido voltou. | **o entregador nao encontrou meu endereco e o pedido voltou...** | `delivery_problem` |
+| `orig_delivery_problem_005_capitalization_01` | `capitalization` | O entregador nao encontrou meu endereco e o pedido voltou. | **O ENTREGADOR NAO ENCONTROU MEU ENDERECO E O PEDIDO VOLTOU.** | `delivery_problem` |
+| `orig_delivery_problem_006_paraphrase_01` | `paraphrase` | Recebi apenas parte dos itens que deveriam chegar. | **A encomenda veio incompleta, faltando alguns dos produtos comprados.** | `delivery_problem` |
+| `orig_delivery_problem_006_paraphrase_02` | `paraphrase` | Recebi apenas parte dos itens que deveriam chegar. | **Só chegou uma fração do meu pedido, o resto está faltando.** | `delivery_problem` |
+| `orig_delivery_problem_006_paraphrase_03` | `paraphrase` | Recebi apenas parte dos itens que deveriam chegar. | **Abri o pacote e notei que não vieram todos os itens que eu pedi.** | `delivery_problem` |
+| `orig_delivery_problem_006_punctuation_01` | `punctuation` | Recebi apenas parte dos itens que deveriam chegar. | **recebi apenas parte dos itens que deveriam chegar...** | `delivery_problem` |
+| `orig_delivery_problem_006_capitalization_01` | `capitalization` | Recebi apenas parte dos itens que deveriam chegar. | **recebi apenas parte dos itens que deveriam chegar.** | `delivery_problem` |
+| `orig_delivery_problem_007_paraphrase_01` | `paraphrase` | Quero informacoes sobre o atraso na entrega do meu pedido. | **Desejo saber o motivo de o meu pedido estar demorando para ser entregue.** | `delivery_problem` |
+| `orig_delivery_problem_007_paraphrase_02` | `paraphrase` | Quero informacoes sobre o atraso na entrega do meu pedido. | **Poderiam me atualizar sobre a situação da entrega que está em atraso?** | `delivery_problem` |
+| `orig_delivery_problem_007_paraphrase_03` | `paraphrase` | Quero informacoes sobre o atraso na entrega do meu pedido. | **Solicito esclarecimentos a respeito do atraso no frete do meu produto.** | `delivery_problem` |
+| `orig_delivery_problem_007_punctuation_01` | `punctuation` | Quero informacoes sobre o atraso na entrega do meu pedido. | **quero informacoes sobre o atraso na entrega do meu pedido...** | `delivery_problem` |
+| `orig_delivery_problem_007_capitalization_01` | `capitalization` | Quero informacoes sobre o atraso na entrega do meu pedido. | **QUERO informacoes SOBRE o ATRASO na ENTREGA do MEU pedido.** | `delivery_problem` |
+| `orig_delivery_problem_008_paraphrase_01` | `paraphrase` | Meu produto ficou parado na transportadora. | **A encomenda parece estar retida ou estacionada na empresa de logística.** | `delivery_problem` |
+| `orig_delivery_problem_008_paraphrase_02` | `paraphrase` | Meu produto ficou parado na transportadora. | **O rastreamento indica que o item não sai da unidade da transportadora.** | `delivery_problem` |
+| `orig_delivery_problem_008_paraphrase_03` | `paraphrase` | Meu produto ficou parado na transportadora. | **Meu pedido travou no centro de distribuição da transportadora.** | `delivery_problem` |
+| `orig_delivery_problem_008_punctuation_01` | `punctuation` | Meu produto ficou parado na transportadora. | **meu produto ficou parado na transportadora...** | `delivery_problem` |
+| `orig_delivery_problem_008_capitalization_01` | `capitalization` | Meu produto ficou parado na transportadora. | **MEU PRODUTO FICOU PARADO NA TRANSPORTADORA.** | `delivery_problem` |
+| `orig_delivery_problem_009_paraphrase_01` | `paraphrase` | A previsao de entrega passou e nao tive nenhuma atualizacao. | **O prazo final estimado já venceu e não recebi novos avisos sobre a encomenda.** | `delivery_problem` |
+| `orig_delivery_problem_009_paraphrase_02` | `paraphrase` | A previsao de entrega passou e nao tive nenhuma atualizacao. | **A data de entrega já expirou e sigo sem informações sobre o meu pedido.** | `delivery_problem` |
+| `orig_delivery_problem_009_paraphrase_03` | `paraphrase` | A previsao de entrega passou e nao tive nenhuma atualizacao. | **Já passou do dia previsto para o recebimento e não há novidades no sistema.** | `delivery_problem` |
+| `orig_delivery_problem_009_punctuation_01` | `punctuation` | A previsao de entrega passou e nao tive nenhuma atualizacao. | **a previsao de entrega passou e nao tive nenhuma atualizacao...** | `delivery_problem` |
+| `orig_delivery_problem_009_capitalization_01` | `capitalization` | A previsao de entrega passou e nao tive nenhuma atualizacao. | **a previsao de entrega passou e nao tive nenhuma atualizacao.** | `delivery_problem` |
+| `orig_delivery_problem_010_paraphrase_01` | `paraphrase` | O status diz que saiu para entrega mas nao chegou ate agora. | **Aparece que o produto está em rota de entrega, mas até o momento não recebi.** | `delivery_problem` |
+| `orig_delivery_problem_010_paraphrase_02` | `paraphrase` | O status diz que saiu para entrega mas nao chegou ate agora. | **A encomenda saiu para entrega hoje de manhã, mas ainda não chegou no meu endereço.** | `delivery_problem` |
+| `orig_delivery_problem_010_paraphrase_03` | `paraphrase` | O status diz que saiu para entrega mas nao chegou ate agora. | **Consta que o motorista saiu para entregar, porém a mercadoria não chegou.** | `delivery_problem` |
+| `orig_delivery_problem_010_punctuation_01` | `punctuation` | O status diz que saiu para entrega mas nao chegou ate agora. | **o status diz que saiu para entrega mas nao chegou ate agora...** | `delivery_problem` |
+| `orig_delivery_problem_010_capitalization_01` | `capitalization` | O status diz que saiu para entrega mas nao chegou ate agora. | **O status DIZ que SAIU para ENTREGA mas NAO chegou ATE agora.** | `delivery_problem` |
+| `orig_payment_issue_001_paraphrase_01` | `paraphrase` | Meu pagamento foi recusado. | **A transação financeira da minha compra não foi aprovada pelo sistema.** | `payment_issue` |
+| `orig_payment_issue_001_paraphrase_02` | `paraphrase` | Meu pagamento foi recusado. | **Minha tentativa de pagamento deu como negada.** | `payment_issue` |
+| `orig_payment_issue_001_paraphrase_03` | `paraphrase` | Meu pagamento foi recusado. | **O sistema rejeitou a forma de pagamento que utilizei.** | `payment_issue` |
+| `orig_payment_issue_001_punctuation_01` | `punctuation` | Meu pagamento foi recusado. | **meu pagamento foi recusado...** | `payment_issue` |
+| `orig_payment_issue_001_capitalization_01` | `capitalization` | Meu pagamento foi recusado. | **MEU PAGAMENTO FOI RECUSADO.** | `payment_issue` |
+| `orig_payment_issue_002_paraphrase_01` | `paraphrase` | Tentei pagar com cartao e apareceu uma cobranca duplicada. | **Houve um débito duplo na minha fatura ao tentar passar o cartão.** | `payment_issue` |
+| `orig_payment_issue_002_paraphrase_02` | `paraphrase` | Tentei pagar com cartao e apareceu uma cobranca duplicada. | **Paguei no cartão de crédito, mas a transação foi cobrada duas vezes.** | `payment_issue` |
+| `orig_payment_issue_002_paraphrase_03` | `paraphrase` | Tentei pagar com cartao e apareceu uma cobranca duplicada. | **Identifiquei uma cobrança repetida do mesmo valor no meu extrato do cartão.** | `payment_issue` |
+| `orig_payment_issue_002_punctuation_01` | `punctuation` | Tentei pagar com cartao e apareceu uma cobranca duplicada. | **tentei pagar com cartao e apareceu uma cobranca duplicada...** | `payment_issue` |
+| `orig_payment_issue_002_capitalization_01` | `capitalization` | Tentei pagar com cartao e apareceu uma cobranca duplicada. | **tentei pagar com cartao e apareceu uma cobranca duplicada.** | `payment_issue` |
+| `orig_payment_issue_003_paraphrase_01` | `paraphrase` | O boleto venceu antes de eu conseguir concluir a compra. | **Não consegui efetuar o pagamento do boleto dentro do prazo de validade.** | `payment_issue` |
+| `orig_payment_issue_003_paraphrase_02` | `paraphrase` | O boleto venceu antes de eu conseguir concluir a compra. | **O prazo do boleto expirou antes que eu pudesse pagar o pedido.** | `payment_issue` |
+| `orig_payment_issue_003_paraphrase_03` | `paraphrase` | O boleto venceu antes de eu conseguir concluir a compra. | **Perdi a data de vencimento do boleto bancário da minha compra.** | `payment_issue` |
+| `orig_payment_issue_003_punctuation_01` | `punctuation` | O boleto venceu antes de eu conseguir concluir a compra. | **o boleto venceu antes de eu conseguir concluir a compra...** | `payment_issue` |
+| `orig_payment_issue_003_capitalization_01` | `capitalization` | O boleto venceu antes de eu conseguir concluir a compra. | **O boleto VENCEU antes DE eu CONSEGUIR concluir A compra.** | `payment_issue` |
+| `orig_payment_issue_004_paraphrase_01` | `paraphrase` | Fiz o pagamento por PIX mas o pedido ainda nao foi confirmado. | **Enviei o dinheiro por PIX faz tempo, mas o sistema ainda não reconheceu o pagamento.** | `payment_issue` |
+| `orig_payment_issue_004_paraphrase_02` | `paraphrase` | Fiz o pagamento por PIX mas o pedido ainda nao foi confirmado. | **Já transferi via PIX, contudo a compra permanece aguardando confirmação.** | `payment_issue` |
+| `orig_payment_issue_004_paraphrase_03` | `paraphrase` | Fiz o pagamento por PIX mas o pedido ainda nao foi confirmado. | **O PIX da minha compra já foi concluído, mas o status do pedido não atualizou.** | `payment_issue` |
+| `orig_payment_issue_004_punctuation_01` | `punctuation` | Fiz o pagamento por PIX mas o pedido ainda nao foi confirmado. | **fiz o pagamento por PIX mas o pedido ainda nao foi confirmado...** | `payment_issue` |
+| `orig_payment_issue_004_capitalization_01` | `capitalization` | Fiz o pagamento por PIX mas o pedido ainda nao foi confirmado. | **FIZ O PAGAMENTO POR PIX MAS O PEDIDO AINDA NAO FOI CONFIRMADO.** | `payment_issue` |
+| `orig_payment_issue_005_paraphrase_01` | `paraphrase` | Nao consigo finalizar a compra porque o sistema rejeita meu cartao. | **O site recusa a aprovação do meu cartão de crédito ao tentar encerrar o pedido.** | `payment_issue` |
+| `orig_payment_issue_005_paraphrase_02` | `paraphrase` | Nao consigo finalizar a compra porque o sistema rejeita meu cartao. | **Toda vez que tento pagar com o cartão, ocorre um erro de rejeição no checkout.** | `payment_issue` |
+| `orig_payment_issue_005_paraphrase_03` | `paraphrase` | Nao consigo finalizar a compra porque o sistema rejeita meu cartao. | **Minha compra não é concluída porque o portal não aceita os dados do meu cartão.** | `payment_issue` |
+| `orig_payment_issue_005_punctuation_01` | `punctuation` | Nao consigo finalizar a compra porque o sistema rejeita meu cartao. | **nao consigo finalizar a compra porque o sistema rejeita meu cartao...** | `payment_issue` |
+| `orig_payment_issue_005_capitalization_01` | `capitalization` | Nao consigo finalizar a compra porque o sistema rejeita meu cartao. | **nao consigo finalizar a compra porque o sistema rejeita meu cartao.** | `payment_issue` |
+| `orig_payment_issue_006_paraphrase_01` | `paraphrase` | A cobranca veio com valor diferente do carrinho. | **O valor cobrado final está divergindo do total exibido na tela de compras.** | `payment_issue` |
+| `orig_payment_issue_006_paraphrase_02` | `paraphrase` | A cobranca veio com valor diferente do carrinho. | **O sistema me cobrou uma quantia diferente da que constava nos produtos selecionados.** | `payment_issue` |
+| `orig_payment_issue_006_paraphrase_03` | `paraphrase` | A cobranca veio com valor diferente do carrinho. | **O preço cobrado na transação está maior do que o preço original do carrinho.** | `payment_issue` |
+| `orig_payment_issue_006_punctuation_01` | `punctuation` | A cobranca veio com valor diferente do carrinho. | **a cobranca veio com valor diferente do carrinho...** | `payment_issue` |
+| `orig_payment_issue_006_capitalization_01` | `capitalization` | A cobranca veio com valor diferente do carrinho. | **A cobranca VEIO com VALOR diferente DO carrinho.** | `payment_issue` |
+| `orig_payment_issue_007_paraphrase_01` | `paraphrase` | Preciso de ajuda porque o pagamento ficou pendente. | **Gostaria de suporte pois a aprovação do meu pagamento está travada como pendente.** | `payment_issue` |
+| `orig_payment_issue_007_paraphrase_02` | `paraphrase` | Preciso de ajuda porque o pagamento ficou pendente. | **O status do pagamento da minha compra não muda de pendente, o que devo fazer?** | `payment_issue` |
+| `orig_payment_issue_007_paraphrase_03` | `paraphrase` | Preciso de ajuda porque o pagamento ficou pendente. | **O processamento do meu pagamento parou e preciso de auxílio para resolver.** | `payment_issue` |
+| `orig_payment_issue_007_punctuation_01` | `punctuation` | Preciso de ajuda porque o pagamento ficou pendente. | **preciso de ajuda porque o pagamento ficou pendente...** | `payment_issue` |
+| `orig_payment_issue_007_capitalization_01` | `capitalization` | Preciso de ajuda porque o pagamento ficou pendente. | **PRECISO DE AJUDA PORQUE O PAGAMENTO FICOU PENDENTE.** | `payment_issue` |
+| `orig_payment_issue_008_paraphrase_01` | `paraphrase` | Meu cartao foi cobrado mas o pedido nao aparece na conta. | **A fatura do meu cartão já acusa a cobrança, mas o pedido sumiu do meu perfil no site.** | `payment_issue` |
+| `orig_payment_issue_008_paraphrase_02` | `paraphrase` | Meu cartao foi cobrado mas o pedido nao aparece na conta. | **Houve o débito no meu cartão de crédito, porém não há registro da compra na minha conta.** | `payment_issue` |
+| `orig_payment_issue_008_paraphrase_03` | `paraphrase` | Meu cartao foi cobrado mas o pedido nao aparece na conta. | **Fui cobrado pela compra, mas o pedido não foi listado na minha área de cliente.** | `payment_issue` |
+| `orig_payment_issue_008_punctuation_01` | `punctuation` | Meu cartao foi cobrado mas o pedido nao aparece na conta. | **meu cartao foi cobrado mas o pedido nao aparece na conta...** | `payment_issue` |
+| `orig_payment_issue_008_capitalization_01` | `capitalization` | Meu cartao foi cobrado mas o pedido nao aparece na conta. | **meu cartao foi cobrado mas o pedido nao aparece na conta.** | `payment_issue` |
+| `orig_payment_issue_009_paraphrase_01` | `paraphrase` | O site nao aceita o codigo de pagamento do boleto. | **Estou tentando pagar a fatura digitando o código de barras, mas dá erro de boleto inválido.** | `payment_issue` |
+| `orig_payment_issue_009_paraphrase_02` | `paraphrase` | O site nao aceita o codigo de pagamento do boleto. | **A linha digitável do boleto gerada pelo site não é reconhecida pelo meu banco.** | `payment_issue` |
+| `orig_payment_issue_009_paraphrase_03` | `paraphrase` | O site nao aceita o codigo de pagamento do boleto. | **O código para pagamento do boleto está dando erro na hora de finalizar.** | `payment_issue` |
+| `orig_payment_issue_009_punctuation_01` | `punctuation` | O site nao aceita o codigo de pagamento do boleto. | **o site nao aceita o codigo de pagamento do boleto...** | `payment_issue` |
+| `orig_payment_issue_009_capitalization_01` | `capitalization` | O site nao aceita o codigo de pagamento do boleto. | **O site NAO aceita O codigo DE pagamento DO boleto.** | `payment_issue` |
+| `orig_payment_issue_010_paraphrase_01` | `paraphrase` | Houve erro na hora de processar meu pagamento. | **Ocorreu uma falha sistêmica durante a etapa de processamento da transação financeira.** | `payment_issue` |
+| `orig_payment_issue_010_paraphrase_02` | `paraphrase` | Houve erro na hora de processar meu pagamento. | **A transação deu erro logo após eu digitar os dados de pagamento.** | `payment_issue` |
+| `orig_payment_issue_010_paraphrase_03` | `paraphrase` | Houve erro na hora de processar meu pagamento. | **O sistema gerou uma mensagem de erro ao processar o pagamento da compra.** | `payment_issue` |
+| `orig_payment_issue_010_punctuation_01` | `punctuation` | Houve erro na hora de processar meu pagamento. | **houve erro na hora de processar meu pagamento...** | `payment_issue` |
+| `orig_payment_issue_010_capitalization_01` | `capitalization` | Houve erro na hora de processar meu pagamento. | **HOUVE ERRO NA HORA DE PROCESSAR MEU PAGAMENTO.** | `payment_issue` |
+| `orig_product_information_001_paraphrase_01` | `paraphrase` | Esse produto tem garantia? | **Qual é o tempo e as condições de garantia oferecidos para este item?** | `product_information` |
+| `orig_product_information_001_paraphrase_02` | `paraphrase` | Esse produto tem garantia? | **Gostaria de saber se o produto vem com garantia de fábrica.** | `product_information` |
+| `orig_product_information_001_paraphrase_03` | `paraphrase` | Esse produto tem garantia? | **Existe cobertura de garantia para este artigo?** | `product_information` |
+| `orig_product_information_001_punctuation_01` | `punctuation` | Esse produto tem garantia? | **esse produto tem garantia?** | `product_information` |
+| `orig_product_information_001_capitalization_01` | `capitalization` | Esse produto tem garantia? | **esse produto tem garantia?** | `product_information` |
+| `orig_product_information_002_paraphrase_01` | `paraphrase` | Gostaria de saber se esse celular esta disponivel na cor preta. | **Vocês possuem estoque deste modelo de smartphone na opção de cor preta?** | `product_information` |
+| `orig_product_information_002_paraphrase_02` | `paraphrase` | Gostaria de saber se esse celular esta disponivel na cor preta. | **Tem o celular preto disponível para pronta entrega?** | `product_information` |
+| `orig_product_information_002_paraphrase_03` | `paraphrase` | Gostaria de saber se esse celular esta disponivel na cor preta. | **O aparelho em questão conta com a variação na cor preta no momento?** | `product_information` |
+| `orig_product_information_002_punctuation_01` | `punctuation` | Gostaria de saber se esse celular esta disponivel na cor preta. | **gostaria de saber se esse celular esta disponivel na cor preta...** | `product_information` |
+| `orig_product_information_002_capitalization_01` | `capitalization` | Gostaria de saber se esse celular esta disponivel na cor preta. | **GOSTARIA de SABER se ESSE celular ESTA disponivel NA cor PRETA.** | `product_information` |
+| `orig_product_information_003_paraphrase_01` | `paraphrase` | Qual e o tamanho exato dessa mesa? | **Poderiam me informar as dimensões detalhadas (altura, largura e profundidade) desta mesa?** | `product_information` |
+| `orig_product_information_003_paraphrase_02` | `paraphrase` | Qual e o tamanho exato dessa mesa? | **Quais são as medidas de comprimento e largura desse móvel?** | `product_information` |
+| `orig_product_information_003_paraphrase_03` | `paraphrase` | Qual e o tamanho exato dessa mesa? | **Preciso saber o tamanho preciso desse modelo de mesa.** | `product_information` |
+| `orig_product_information_003_punctuation_01` | `punctuation` | Qual e o tamanho exato dessa mesa? | **qual e o tamanho exato dessa mesa?** | `product_information` |
+| `orig_product_information_003_capitalization_01` | `capitalization` | Qual e o tamanho exato dessa mesa? | **QUAL E O TAMANHO EXATO DESSA MESA?** | `product_information` |
+| `orig_product_information_004_paraphrase_01` | `paraphrase` | Esse notebook vem com carregador incluso? | **O carregador acompanha o computador na embalagem original?** | `product_information` |
+| `orig_product_information_004_paraphrase_02` | `paraphrase` | Esse notebook vem com carregador incluso? | **Gostaria de confirmar se a fonte de alimentação está inclusa na compra do laptop.** | `product_information` |
+| `orig_product_information_004_paraphrase_03` | `paraphrase` | Esse notebook vem com carregador incluso? | **Esse modelo de notebook já vem com o cabo de carregar?** | `product_information` |
+| `orig_product_information_004_punctuation_01` | `punctuation` | Esse notebook vem com carregador incluso? | **esse notebook vem com carregador incluso?** | `product_information` |
+| `orig_product_information_004_capitalization_01` | `capitalization` | Esse notebook vem com carregador incluso? | **esse notebook vem com carregador incluso?** | `product_information` |
+| `orig_product_information_005_paraphrase_01` | `paraphrase` | Preciso saber se a roupa tem tabela de medidas. | **Existe algum guia de tamanhos disponível para esta peça de vestuário?** | `product_information` |
+| `orig_product_information_005_paraphrase_02` | `paraphrase` | Preciso saber se a roupa tem tabela de medidas. | **Onde encontro a tabela com as dimensões dessa roupa em centímetros?** | `product_information` |
+| `orig_product_information_005_paraphrase_03` | `paraphrase` | Preciso saber se a roupa tem tabela de medidas. | **Essa peça de roupa possui tabela de medidas para referência?** | `product_information` |
+| `orig_product_information_005_punctuation_01` | `punctuation` | Preciso saber se a roupa tem tabela de medidas. | **preciso saber se a roupa tem tabela de medidas...** | `product_information` |
+| `orig_product_information_005_capitalization_01` | `capitalization` | Preciso saber se a roupa tem tabela de medidas. | **PRECISO saber SE a ROUPA tem TABELA de MEDIDAS.** | `product_information` |
+| `orig_product_information_006_paraphrase_01` | `paraphrase` | O produto e original ou similar? | **Gostaria de esclarecer se o item à venda é de marca oficial ou se é uma réplica/paralelo.** | `product_information` |
+| `orig_product_information_006_paraphrase_02` | `paraphrase` | O produto e original ou similar? | **Trata-se de uma mercadoria legítima da fabricante ou de um modelo genérico?** | `product_information` |
+| `orig_product_information_006_paraphrase_03` | `paraphrase` | O produto e original ou similar? | **Esse artigo anunciado é original ou trata-se de um produto compatível secundário?** | `product_information` |
+| `orig_product_information_006_punctuation_01` | `punctuation` | O produto e original ou similar? | **o produto e original ou similar?** | `product_information` |
+| `orig_product_information_006_capitalization_01` | `capitalization` | O produto e original ou similar? | **O PRODUTO E ORIGINAL OU SIMILAR?** | `product_information` |
+| `orig_product_information_007_paraphrase_01` | `paraphrase` | Vocês tem previsao de reposicao desse item? | **Quando vocês pretendem restabelecer o estoque deste produto que está indisponível?** | `product_information` |
+| `orig_product_information_007_paraphrase_02` | `paraphrase` | Vocês tem previsao de reposicao desse item? | **Há alguma data estimada para que o artigo volte a ficar à venda no site?** | `product_information` |
+| `orig_product_information_007_paraphrase_03` | `paraphrase` | Vocês tem previsao de reposicao desse item? | **Este produto esgotado voltará ao catálogo em breve?** | `product_information` |
+| `orig_product_information_007_punctuation_01` | `punctuation` | Vocês tem previsao de reposicao desse item? | **vocês tem previsao de reposicao desse item?** | `product_information` |
+| `orig_product_information_007_capitalization_01` | `capitalization` | Vocês tem previsao de reposicao desse item? | **vocês tem previsao de reposicao desse item?** | `product_information` |
+| `orig_product_information_008_paraphrase_01` | `paraphrase` | Quais sao as especificacoes tecnicas desse monitor? | **Poderiam me passar a ficha técnica completa (resolução, taxa de atualização, entradas) desta tela?** | `product_information` |
+| `orig_product_information_008_paraphrase_02` | `paraphrase` | Quais sao as especificacoes tecnicas desse monitor? | **Quais as principais características de hardware e especificações do monitor?** | `product_information` |
+| `orig_product_information_008_paraphrase_03` | `paraphrase` | Quais sao as especificacoes tecnicas desse monitor? | **Quero ver os detalhes técnicos de fabricação desse monitor.** | `product_information` |
+| `orig_product_information_008_punctuation_01` | `punctuation` | Quais sao as especificacoes tecnicas desse monitor? | **quais sao as especificacoes tecnicas desse monitor?** | `product_information` |
+| `orig_product_information_008_capitalization_01` | `capitalization` | Quais sao as especificacoes tecnicas desse monitor? | **QUAIS sao AS especificacoes TECNICAS desse MONITOR?** | `product_information` |
+| `orig_product_information_009_paraphrase_01` | `paraphrase` | Esse fone funciona com celular Android? | **O fone de ouvido é compatível com sistemas operacionais Android?** | `product_information` |
+| `orig_product_information_009_paraphrase_02` | `paraphrase` | Esse fone funciona com celular Android? | **Consigo parear e usar todos os recursos deste fone em um smartphone Android?** | `product_information` |
+| `orig_product_information_009_paraphrase_03` | `paraphrase` | Esse fone funciona com celular Android? | **Esse modelo de fone de ouvido tem suporte para celulares da linha Android?** | `product_information` |
+| `orig_product_information_009_punctuation_01` | `punctuation` | Esse fone funciona com celular Android? | **esse fone funciona com celular Android?** | `product_information` |
+| `orig_product_information_009_capitalization_01` | `capitalization` | Esse fone funciona com celular Android? | **ESSE FONE FUNCIONA COM CELULAR ANDROID?** | `product_information` |
+| `orig_product_information_010_paraphrase_01` | `paraphrase` | A cadeira suporta ate quantos quilos? | **Qual é a capacidade máxima de peso em kg que este assento consegue aguentar com segurança?** | `product_information` |
+| `orig_product_information_010_paraphrase_02` | `paraphrase` | A cadeira suporta ate quantos quilos? | **Essa cadeira suporta peso de até quantos quilogramas?** | `product_information` |
+| `orig_product_information_010_paraphrase_03` | `paraphrase` | A cadeira suporta ate quantos quilos? | **Gostaria de saber o limite de carga recomendado para essa cadeira.** | `product_information` |
+| `orig_product_information_010_punctuation_01` | `punctuation` | A cadeira suporta ate quantos quilos? | **a cadeira suporta ate quantos quilos?** | `product_information` |
+| `orig_product_information_010_capitalization_01` | `capitalization` | A cadeira suporta ate quantos quilos? | **a cadeira suporta ate quantos quilos?** | `product_information` |
+| `orig_account_support_001_paraphrase_01` | `paraphrase` | Nao consigo acessar minha conta. | **Estou tendo problemas para fazer login na minha área pessoal.** | `account_support` |
+| `orig_account_support_001_paraphrase_02` | `paraphrase` | Nao consigo acessar minha conta. | **Não estou conseguindo entrar no meu perfil cadastrado no site.** | `account_support` |
+| `orig_account_support_001_paraphrase_03` | `paraphrase` | Nao consigo acessar minha conta. | **Minhas credenciais não me deixam acessar minha conta.** | `account_support` |
+| `orig_account_support_001_punctuation_01` | `punctuation` | Nao consigo acessar minha conta. | **nao consigo acessar minha conta...** | `account_support` |
+| `orig_account_support_001_capitalization_01` | `capitalization` | Nao consigo acessar minha conta. | **NAO consigo ACESSAR minha CONTA.** | `account_support` |
+| `orig_account_support_002_paraphrase_01` | `paraphrase` | Esqueci minha senha e preciso recuperar o acesso. | **Não me recordo da senha cadastrada e gostaria de redefini-la para voltar a entrar no sistema.** | `account_support` |
+| `orig_account_support_002_paraphrase_02` | `paraphrase` | Esqueci minha senha e preciso recuperar o acesso. | **Preciso restaurar minha conta pois esqueci a palavra-passe de acesso.** | `account_support` |
+| `orig_account_support_002_paraphrase_03` | `paraphrase` | Esqueci minha senha e preciso recuperar o acesso. | **Como faço para trocar a senha que perdi e recuperar meu perfil?** | `account_support` |
+| `orig_account_support_002_punctuation_01` | `punctuation` | Esqueci minha senha e preciso recuperar o acesso. | **esqueci minha senha e preciso recuperar o acesso...** | `account_support` |
+| `orig_account_support_002_capitalization_01` | `capitalization` | Esqueci minha senha e preciso recuperar o acesso. | **ESQUECI MINHA SENHA E PRECISO RECUPERAR O ACESSO.** | `account_support` |
+| `orig_account_support_003_paraphrase_01` | `paraphrase` | Meu login nao entra mesmo com a senha correta. | **Mesmo digitando os dados de login e senha corretos, o sistema recusa a entrada.** | `account_support` |
+| `orig_account_support_003_paraphrase_02` | `paraphrase` | Meu login nao entra mesmo com a senha correta. | **Tenho certeza de que a senha está certa, mas o painel não abre.** | `account_support` |
+| `orig_account_support_003_paraphrase_03` | `paraphrase` | Meu login nao entra mesmo com a senha correta. | **Ocorre falha na autenticação da conta, embora o usuário e senha digitados estejam exatos.** | `account_support` |
+| `orig_account_support_003_punctuation_01` | `punctuation` | Meu login nao entra mesmo com a senha correta. | **meu login nao entra mesmo com a senha correta...** | `account_support` |
+| `orig_account_support_003_capitalization_01` | `capitalization` | Meu login nao entra mesmo com a senha correta. | **meu login nao entra mesmo com a senha correta.** | `account_support` |
+| `orig_account_support_004_paraphrase_01` | `paraphrase` | Quero alterar o e-mail cadastrado na minha conta. | **Como proceder para atualizar o endereço de correio eletrônico vinculado ao meu perfil?** | `account_support` |
+| `orig_account_support_004_paraphrase_02` | `paraphrase` | Quero alterar o e-mail cadastrado na minha conta. | **Desejo modificar o endereço de e-mail que está registrado no meu login.** | `account_support` |
+| `orig_account_support_004_paraphrase_03` | `paraphrase` | Quero alterar o e-mail cadastrado na minha conta. | **Gostaria de trocar o e-mail de cadastro da minha conta pessoal.** | `account_support` |
+| `orig_account_support_004_punctuation_01` | `punctuation` | Quero alterar o e-mail cadastrado na minha conta. | **quero alterar o e-mail cadastrado na minha conta...** | `account_support` |
+| `orig_account_support_004_capitalization_01` | `capitalization` | Quero alterar o e-mail cadastrado na minha conta. | **QUERO alterar O e-mail CADASTRADO na MINHA conta.** | `account_support` |
+| `orig_account_support_005_paraphrase_01` | `paraphrase` | Meu cadastro esta com CPF errado e preciso corrigir. | **Percebi que preenchi o número do meu documento de CPF de forma incorreta e quero alterá-lo.** | `account_support` |
+| `orig_account_support_005_paraphrase_02` | `paraphrase` | Meu cadastro esta com CPF errado e preciso corrigir. | **Gostaria de retificar o CPF informado no meu formulário de registro.** | `account_support` |
+| `orig_account_support_005_paraphrase_03` | `paraphrase` | Meu cadastro esta com CPF errado e preciso corrigir. | **Meu cadastro possui um erro no número de CPF e preciso realizar essa correção cadastral.** | `account_support` |
+| `orig_account_support_005_punctuation_01` | `punctuation` | Meu cadastro esta com CPF errado e preciso corrigir. | **meu cadastro esta com CPF errado e preciso corrigir...** | `account_support` |
+| `orig_account_support_005_capitalization_01` | `capitalization` | Meu cadastro esta com CPF errado e preciso corrigir. | **MEU CADASTRO ESTA COM CPF ERRADO E PRECISO CORRIGIR.** | `account_support` |
+| `orig_account_support_006_paraphrase_01` | `paraphrase` | Nao recebo o codigo para redefinir a senha. | **Estou tentando trocar a senha, mas a mensagem com o link ou token de verificação não chega na caixa de entrada.** | `account_support` |
+| `orig_account_support_006_paraphrase_02` | `paraphrase` | Nao recebo o codigo para redefinir a senha. | **Solicitei o código de verificação para alteração de senha, mas ele não foi enviado.** | `account_support` |
+| `orig_account_support_006_paraphrase_03` | `paraphrase` | Nao recebo o codigo para redefinir a senha. | **O e-mail/SMS com o código de recuperação de login está demorando para chegar ou não veio.** | `account_support` |
+| `orig_account_support_006_punctuation_01` | `punctuation` | Nao recebo o codigo para redefinir a senha. | **nao recebo o codigo para redefinir a senha...** | `account_support` |
+| `orig_account_support_006_capitalization_01` | `capitalization` | Nao recebo o codigo para redefinir a senha. | **nao recebo o codigo para redefinir a senha.** | `account_support` |
+| `orig_account_support_007_paraphrase_01` | `paraphrase` | Minha conta foi bloqueada e nao sei o motivo. | **Meu perfil de usuário foi suspenso/bloqueado sem qualquer aviso ou justificativa aparente.** | `account_support` |
+| `orig_account_support_007_paraphrase_02` | `paraphrase` | Minha conta foi bloqueada e nao sei o motivo. | **Gostaria de entender por que o meu acesso à conta foi bloqueado de repente.** | `account_support` |
+| `orig_account_support_007_paraphrase_03` | `paraphrase` | Minha conta foi bloqueada e nao sei o motivo. | **Fui impedido de logar por conta de um bloqueio e gostaria de saber as razões.** | `account_support` |
+| `orig_account_support_007_punctuation_01` | `punctuation` | Minha conta foi bloqueada e nao sei o motivo. | **minha conta foi bloqueada e nao sei o motivo...** | `account_support` |
+| `orig_account_support_007_capitalization_01` | `capitalization` | Minha conta foi bloqueada e nao sei o motivo. | **MINHA conta FOI bloqueada E nao SEI o MOTIVO.** | `account_support` |
+| `orig_account_support_008_paraphrase_01` | `paraphrase` | Preciso atualizar meus dados de cadastro. | **Gostaria de efetuar modificações nas minhas informações pessoais salvas no site.** | `account_support` |
+| `orig_account_support_008_paraphrase_02` | `paraphrase` | Preciso atualizar meus dados de cadastro. | **Como faço para alterar meus dados de contato e endereço no banco de dados?** | `account_support` |
+| `orig_account_support_008_paraphrase_03` | `paraphrase` | Preciso atualizar meus dados de cadastro. | **Preciso modificar algumas informações do meu perfil cadastrado.** | `account_support` |
+| `orig_account_support_008_punctuation_01` | `punctuation` | Preciso atualizar meus dados de cadastro. | **preciso atualizar meus dados de cadastro...** | `account_support` |
+| `orig_account_support_008_capitalization_01` | `capitalization` | Preciso atualizar meus dados de cadastro. | **PRECISO ATUALIZAR MEUS DADOS DE CADASTRO.** | `account_support` |
+| `orig_account_support_009_paraphrase_01` | `paraphrase` | O aplicativo encerra a sessao sempre que tento entrar. | **Toda vez que faço o login pelo app, a sessão cai e sou deslogado na mesma hora.** | `account_support` |
+| `orig_account_support_009_paraphrase_02` | `paraphrase` | O aplicativo encerra a sessao sempre que tento entrar. | **O aplicativo fecha meu login automaticamente logo após eu conseguir acessar.** | `account_support` |
+| `orig_account_support_009_paraphrase_03` | `paraphrase` | O aplicativo encerra a sessao sempre que tento entrar. | **Estou enfrentando um bug onde o app desloga sozinho logo depois da tela inicial.** | `account_support` |
+| `orig_account_support_009_punctuation_01` | `punctuation` | O aplicativo encerra a sessao sempre que tento entrar. | **o aplicativo encerra a sessao sempre que tento entrar...** | `account_support` |
+| `orig_account_support_009_capitalization_01` | `capitalization` | O aplicativo encerra a sessao sempre que tento entrar. | **o aplicativo encerra a sessao sempre que tento entrar.** | `account_support` |
+| `orig_account_support_010_paraphrase_01` | `paraphrase` | Nao consigo criar uma nova conta no site. | **O formulário de registro está apresentando falhas e não consigo concluir meu cadastro no portal.** | `account_support` |
+| `orig_account_support_010_paraphrase_02` | `paraphrase` | Nao consigo criar uma nova conta no site. | **Estou tentando me cadastrar no site como novo usuário, mas a criação de conta dá erro.** | `account_support` |
+| `orig_account_support_010_paraphrase_03` | `paraphrase` | Nao consigo criar uma nova conta no site. | **Não é possível finalizar a inscrição de um perfil no site.** | `account_support` |
+| `orig_account_support_010_punctuation_01` | `punctuation` | Nao consigo criar uma nova conta no site. | **nao consigo criar uma nova conta no site...** | `account_support` |
+| `orig_account_support_010_capitalization_01` | `capitalization` | Nao consigo criar uma nova conta no site. | **NAO consigo CRIAR uma NOVA conta NO site.** | `account_support` |
+| `orig_other_001_paraphrase_01` | `paraphrase` | Obrigado pelo atendimento. | **Agradeço muito pelo suporte prestado pela equipe de vocês.** | `other` |
+| `orig_other_001_paraphrase_02` | `paraphrase` | Obrigado pelo atendimento. | **Gostaria de expressar meu agradecimento pela ajuda recebida hoje.** | `other` |
+| `orig_other_001_paraphrase_03` | `paraphrase` | Obrigado pelo atendimento. | **Muito obrigado por terem sanado as minhas dúvidas.** | `other` |
+| `orig_other_001_punctuation_01` | `punctuation` | Obrigado pelo atendimento. | **obrigado pelo atendimento...** | `other` |
+| `orig_other_001_capitalization_01` | `capitalization` | Obrigado pelo atendimento. | **OBRIGADO PELO ATENDIMENTO.** | `other` |
+| `orig_other_002_paraphrase_01` | `paraphrase` | Quero receber novidades e promocoes da loja. | **Gostaria de me inscrever para receber a newsletter e ofertas exclusivas no meu e-mail.** | `other` |
+| `orig_other_002_paraphrase_02` | `paraphrase` | Quero receber novidades e promocoes da loja. | **Como faço para assinar os boletins informativos de descontos de vocês?** | `other` |
+| `orig_other_002_paraphrase_03` | `paraphrase` | Quero receber novidades e promocoes da loja. | **Por favor, me incluam na lista de divulgação de novidades e liquidações.** | `other` |
+| `orig_other_002_punctuation_01` | `punctuation` | Quero receber novidades e promocoes da loja. | **quero receber novidades e promocoes da loja...** | `other` |
+| `orig_other_002_capitalization_01` | `capitalization` | Quero receber novidades e promocoes da loja. | **quero receber novidades e promocoes da loja.** | `other` |
+| `orig_other_003_paraphrase_01` | `paraphrase` | Parabens pela rapidez no suporte. | **Fiquei impressionado com a agilidade com que o time de atendimento solucionou o meu caso.** | `other` |
+| `orig_other_003_paraphrase_02` | `paraphrase` | Parabens pela rapidez no suporte. | **Parabenizo a empresa pelo tempo de resposta extremamente curto no chat.** | `other` |
+| `orig_other_003_paraphrase_03` | `paraphrase` | Parabens pela rapidez no suporte. | **Excelente trabalho na rapidez para me dar uma resposta.** | `other` |
+| `orig_other_003_punctuation_01` | `punctuation` | Parabens pela rapidez no suporte. | **parabens pela rapidez no suporte...** | `other` |
+| `orig_other_003_capitalization_01` | `capitalization` | Parabens pela rapidez no suporte. | **PARABENS pela RAPIDEZ no SUPORTE.** | `other` |
+| `orig_other_004_paraphrase_01` | `paraphrase` | Onde encontro a politica de privacidade do site? | **Qual é o caminho para ler o documento que rege os termos de privacidade de dados do portal?** | `other` |
+| `orig_other_004_paraphrase_02` | `paraphrase` | Onde encontro a politica de privacidade do site? | **Poderiam me apontar a página que detalha o tratamento e privacidade de dados pessoais?** | `other` |
+| `orig_other_004_paraphrase_03` | `paraphrase` | Onde encontro a politica de privacidade do site? | **Em qual seção do site posso consultar a política de segurança e privacidade?** | `other` |
+| `orig_other_004_punctuation_01` | `punctuation` | Onde encontro a politica de privacidade do site? | **onde encontro a politica de privacidade do site?** | `other` |
+| `orig_other_004_capitalization_01` | `capitalization` | Onde encontro a politica de privacidade do site? | **ONDE ENCONTRO A POLITICA DE PRIVACIDADE DO SITE?** | `other` |
+| `orig_other_005_paraphrase_01` | `paraphrase` | Gostaria de deixar uma sugestao para melhorar o aplicativo. | **Tenho uma recomendação de melhoria de usabilidade para propor para a equipe de desenvolvimento do app.** | `account_support` |
+| `orig_other_005_paraphrase_02` | `paraphrase` | Gostaria de deixar uma sugestao para melhorar o aplicativo. | **Como posso enviar um feedback com ideias para aperfeiçoar o app?** | `account_support` |
+| `orig_other_005_paraphrase_03` | `paraphrase` | Gostaria de deixar uma sugestao para melhorar o aplicativo. | **Gostaria de compartilhar uma sugestão de recurso novo para o aplicativo móvel.** | `account_support` |
+| `orig_other_005_punctuation_01` | `punctuation` | Gostaria de deixar uma sugestao para melhorar o aplicativo. | **gostaria de deixar uma sugestao para melhorar o aplicativo...** | `account_support` |
+| `orig_other_005_capitalization_01` | `capitalization` | Gostaria de deixar uma sugestao para melhorar o aplicativo. | **gostaria de deixar uma sugestao para melhorar o aplicativo.** | `account_support` |
+| `orig_other_006_paraphrase_01` | `paraphrase` | Vocês atendem lojas parceiras? | **A plataforma oferece soluções ou atendimento dedicado para estabelecimentos comerciais parceiros?** | `other` |
+| `orig_other_006_paraphrase_02` | `paraphrase` | Vocês atendem lojas parceiras? | **Existe algum canal focado em dar suporte ou fazer negócios com lojas afiliadas?** | `other` |
+| `orig_other_006_paraphrase_03` | `paraphrase` | Vocês atendem lojas parceiras? | **Gostaria de saber se vocês trabalham prestando serviço a empresas parceiras.** | `other` |
+| `orig_other_006_punctuation_01` | `punctuation` | Vocês atendem lojas parceiras? | **vocês atendem lojas parceiras?** | `other` |
+| `orig_other_006_capitalization_01` | `capitalization` | Vocês atendem lojas parceiras? | **VOCÊS atendem LOJAS parceiras?** | `other` |
+| `orig_other_007_paraphrase_01` | `paraphrase` | Como posso falar com a area comercial? | **Qual é o canal direto ou e-mail de contato do setor comercial de vendas de vocês?** | `other` |
+| `orig_other_007_paraphrase_02` | `paraphrase` | Como posso falar com a area comercial? | **Desejo entrar em contato com o departamento de novos negócios e parcerias comerciais.** | `other` |
+| `orig_other_007_paraphrase_03` | `paraphrase` | Como posso falar com a area comercial? | **Como faço para conseguir atendimento com a equipe de vendas corporativas.** | `other` |
+| `orig_other_007_punctuation_01` | `punctuation` | Como posso falar com a area comercial? | **como posso falar com a area comercial?** | `other` |
+| `orig_other_007_capitalization_01` | `capitalization` | Como posso falar com a area comercial? | **COMO POSSO FALAR COM A AREA COMERCIAL?** | `other` |
+| `orig_other_008_paraphrase_01` | `paraphrase` | Estou apenas testando o chat. | **Esta mensagem é somente para testar o funcionamento do sistema de atendimento online.** | `other` |
+| `orig_other_008_paraphrase_02` | `paraphrase` | Estou apenas testando o chat. | **Podem desconsiderar este contato, estou apenas fazendo um teste do canal de conversa.** | `other` |
+| `orig_other_008_paraphrase_03` | `paraphrase` | Estou apenas testando o chat. | **Estou avaliando o chat para ver como a ferramenta se comporta.** | `other` |
+| `orig_other_008_punctuation_01` | `punctuation` | Estou apenas testando o chat. | **estou apenas testando o chat...** | `other` |
+| `orig_other_008_capitalization_01` | `capitalization` | Estou apenas testando o chat. | **estou apenas testando o chat.** | `other` |
+| `orig_other_009_paraphrase_01` | `paraphrase` | Qual e o horario de atendimento da empresa? | **Em quais faixas de horário e dias da semana a central de atendimento fica disponível?** | `other` |
+| `orig_other_009_paraphrase_02` | `paraphrase` | Qual e o horario de atendimento da empresa? | **Poderiam me informar o período de funcionamento para suporte ao cliente?** | `other` |
+| `orig_other_009_paraphrase_03` | `paraphrase` | Qual e o horario de atendimento da empresa? | **Qual o expediente da empresa para contato direto com o suporte?** | `other` |
+| `orig_other_009_punctuation_01` | `punctuation` | Qual e o horario de atendimento da empresa? | **qual e o horario de atendimento da empresa?** | `other` |
+| `orig_other_009_capitalization_01` | `capitalization` | Qual e o horario de atendimento da empresa? | **QUAL e O horario DE atendimento DA empresa?** | `other` |
+| `orig_other_010_paraphrase_01` | `paraphrase` | Bom dia, queria saber se tem alguem disponivel. | **Olá, bom dia! Gostaria de falar com algum atendente do suporte online.** | `other` |
+| `orig_other_010_paraphrase_02` | `paraphrase` | Bom dia, queria saber se tem alguem disponivel. | **Olá, tem algum consultor disponível para atendimento neste momento?** | `other` |
+| `orig_other_010_paraphrase_03` | `paraphrase` | Bom dia, queria saber se tem alguem disponivel. | **Bom dia. Consigo ser atendido por alguém agora?** | `other` |
+| `orig_other_010_punctuation_01` | `punctuation` | Bom dia, queria saber se tem alguem disponivel. | **bom dia, queria saber se tem alguem disponivel...** | `other` |
+| `orig_other_010_capitalization_01` | `capitalization` | Bom dia, queria saber se tem alguem disponivel. | **BOM DIA, QUERIA SABER SE TEM ALGUEM DISPONIVEL.** | `other` |
