@@ -1,8 +1,6 @@
 # Guia de Estudo para Apresentação
 ## Testes Metamórficos em LLMs para Classificação de Intenções
 
-> **Como usar este documento:** Leia na ordem das seções. Cada seção corresponde a uma parte da apresentação. Os destaques em negrito são os pontos que o professor provavelmente vai perguntar.
-
 ---
 
 ## 1. O Problema: Por que testar LLMs é difícil?
@@ -60,7 +58,8 @@ Sistemas baseados em LLMs não têm um **oráculo determinístico claro**. Em so
 
 ### Dataset Original
 - **70 mensagens** em português, **10 por classe** (distribuição balanceada).
-- Criadas e validadas pelo grupo. 2 integrantes realizaram revisão consensual para resolver discrepâncias de anotação.
+- Criadas pela IA do próprio claude (Opus 4.7) na v1.
+- Criadas pela IA da Google (Gemini 3.5 flash) na v2 e revisada pelo grupo.
 
 ### Transformações Geradas (350 casos)
 
@@ -132,35 +131,63 @@ Este é um ponto central da apresentação. O experimento foi realizado em **dua
 
 ## 6. Resultados do Experimento v2 (2 estratégias)
 
-### Comparação Direta v1 vs v2 (excluindo `free`)
+O Experimento v2 focou exclusivamente em formatos de saída estruturados em JSON, excluindo a estratégia livre (`free`). As execuções foram baseadas no novo dataset com paráfrases geradas por IA e validadas/revisadas pelo grupo.
 
-| Métrica | v1 (sem `free`) | v2 | Variação |
-| :--- | :---: | :---: | :---: |
-| Taxa de Violação Geral | 4,71% (33/700) | **7,57% (53/700)** | +2,86% |
-| Taxa de Flip de Predição | 1,29% (9/700) | **3,00% (21/700)** | +1,71% |
-| Saídas Inválidas (JSON) | 0 | 0 | — |
-| Custo Total API | $0.2087 | $0.2059 | -$0.003 |
-
-### Violações por Estratégia (v2)
+### Taxa de Violação Metamórfica (v2)
 
 | Estratégia | Violações | Total | Taxa |
 | :--- | :---: | :---: | :---: |
 | `few_shot` | 20 | 350 | **5,71%** |
 | `strict` | 33 | 350 | **9,43%** |
+| **Geral (v2)** | **53** | **700** | **7,57%** |
 
-### Violações por Tipo de Transformação (v2 vs v1)
+### Taxa de Invalidade por Estratégia (v2)
 
-| Transformação | Taxa v1 | Taxa v2 |
+| Estratégia | Saídas Inválidas | Taxa |
 | :--- | :---: | :---: |
-| Paráfrases | 4,29% | **7,86%** |
-| Pontuação | 5,00% | **6,43%** |
-| Capitalização | 5,71% | **7,86%** |
+| `few_shot` | 0 / 420 | **0%** |
+| `strict` | 0 / 420 | **0%** |
 
-> **Interpretação:** O aumento é esperado e desejável — significa que o dataset v2 é mais eficiente em revelar fragilidades reais do modelo.
+### Lição Aprendida (v2)
+- **Saídas estruturadas garantem previsibilidade:** A imposição de formatos JSON estritos (`strict` e `few_shot`) zerou as saídas inválidas, mostrando-se indispensável para a integração estável de LLMs em fluxos de trabalho programáticos.
+- **Aprendizado em contexto (Few-Shot) reduz violações:** A estratégia `few_shot` obteve um desempenho significativamente melhor que o `strict` (5,71% vs 9,43% de violações), comprovando que fornecer exemplos reduz a instabilidade de classificação do modelo.
+- **Paráfrases reais revelam fraquezas ocultas:** O aumento de violações na v2 demonstra que testes com variações linguísticas fluidas são muito mais eficazes para expor inconsistências semânticas e fragilidades do LLM em produção.
 
 ---
 
-## 7. Análise de Causa Raiz das Falhas
+## 7. Comparação entre Experimento v1 e Experimento v2
+
+### Comparação Direta (Excluindo a estratégia `free`)
+
+| Métrica | Experimento v1 (Sem `free`) | Experimento v2 (Novo Dataset) | Variação |
+| :--- | :---: | :---: | :---: |
+| **Taxa de Violação Geral** | 4,71% (33/700) | **7,57% (53/700)** | **+2,86%** |
+| **Saídas Inválidas (JSON)** | 0 | **0** | — |
+| **Custo Total Estimado** | US$ 0,2087 | **US$ 0,2059** | -US$ 0,0028 |
+
+### Taxa de Violação por Tipo de Transformação (v1 vs v2)
+
+| Transformação | Taxa v1 (Sem `free`) | Taxa v2 | Variação |
+| :--- | :---: | :---: | :---: |
+| `capitalization` | 5,71% (8/140) | **7,86% (11/140)** | **+2,14%** |
+| `paraphrase` | 4,29% (18/420) | **7,86% (33/420)** | **+3,57%** |
+| `punctuation` | 5,00% (7/140) | **6,43% (9/140)** | **+1,43%** |
+
+### Análise do Aumento de Violações
+O aumento geral nas violações metamórficas de **4,71% para 7,57%** é um **indicador positivo de qualidade do teste**. 
+
+No Experimento v1, o uso de prefixos mecânicos repetitivos criava paráfrases muito semelhantes e com forte viés de palavra-chave, facilitando a classificação. Na v2, a IA gerou sentenças fluidas, com vocabulário rico e estruturas sintáticas diversas, expondo a verdadeira sensibilidade do LLM à variação linguística natural.
+
+#### Distinção: Viés de Palavra-chave (v1) vs. Paráfrase Natural (v2)
+
+- **Paráfrase com Viés de Palavra-chave (v1):** As transformações eram geradas por meio de algoritmos de inserção de prefixos fixos e palavras explícitas. Isso mantinha a frase original intacta e repetia os termos-chave que o modelo usa como "atalhos" de decisão.
+  - *Exemplo (`cancel_order`):* A mensagem original *"Quero cancelar"* virava *"Preciso que a loja providencie o cancelamento, pois quero cancelar meu pedido"*. O termo "cancelar" aparece duas vezes e atua como um forte sinalizador (gatilho direto) que facilita a classificação correta pelo LLM.
+- **Paráfrase Natural e Fluida (v2):** As transformações foram geradas usando inteligência artificial generativa e revisadas humanamente. Elas mudam a estrutura sintática da frase e utilizam sinônimos e termos indiretos, removendo os atalhos lexicais.
+  - *Exemplo (`cancel_order`):* A mensagem original *"Quero cancelar"* virava *"Por favor, suspendam a transação que acabei de concluir"*. Note que as palavras "cancelar" ou "cancelamento" não aparecem. O modelo precisa compreender o significado semântico abstrato do ato de "suspender uma transação concluída" para mapeá-lo à intenção de cancelamento, tornando o teste muito mais rigoroso e representativo da linguagem humana real.
+
+---
+
+## 8. Análise de Causa Raiz das Falhas
 
 Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investigadas e classificadas em 3 causas raiz.
 
@@ -180,8 +207,6 @@ Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investig
 
 **Lição:** Classes generalistas como `other` devem ser muito bem definidas no prompt ou subdivididas em subcategorias.
 
----
-
 ### Causa 2: Desalinhamento Humano vs IA (`account_support` ← `other`)
 
 **Magnitude:** 10 das 53 violações (exclusivas da v2).
@@ -197,8 +222,6 @@ Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investig
 
 **Lição:** O desalinhamento entre anotadores humanos e LLMs é uma fonte real de erros. A subjetividade na anotação de rótulos limítrofes é um desafio real em NLP.
 
----
-
 ### Causa 3: Gatilho de Vocabulário Financeiro (`cancel_order` → `payment_issue`)
 
 **Magnitude:** 3 das 53 violações (exclusivas da v2).
@@ -213,7 +236,7 @@ Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investig
 
 ---
 
-## 8. Conclusões Finais
+## 9. Conclusões Finais
 
 ### O que o experimento provou
 
@@ -244,23 +267,5 @@ Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investig
 
 ---
 
-## 9. Perguntas Frequentes de Banca
-
-**Q: Por que usar testes metamórficos em vez de acurácia simples?**
-> A: Porque não há um conjunto de respostas corretas absolutas — o oráculo é difícil de definir para LLMs. Testes metamórficos verificam *consistência* em vez de *correção absoluta*.
-
-**Q: A taxa de violação mais alta no v2 significa que o modelo piorou?**
-> A: Não. Significa que o *conjunto de testes* ficou mais difícil e mais realista. O v2 é melhor como instrumento de teste, não pior como resultado.
-
-**Q: Por que excluíram o prompt `free` do v2?**
-> A: Porque o v1 já provou que `free` é inviável programaticamente (100% de saídas inválidas). Incluí-lo no v2 adicionaria custo sem nenhum valor analítico.
-
-**Q: O que é um "prediction flip"?**
-> A: É quando a predição da frase transformada é diferente da predição da frase original (não do rótulo esperado). Mede instabilidade interna do modelo, independente de qual rótulo é o "certo".
-
-**Q: Como a verificação de não-determinismo foi feita?**
-> A: 10% da base foi executada 3 vezes. Com `temperature=0`, nenhuma variação foi observada — o modelo é completamente determinístico nessa configuração.
-
----
 
 *Documento gerado como material de suporte para a apresentação do projeto de Fundamentos de Teste de Software.*
