@@ -135,11 +135,3 @@ Todos os scripts são parametrizados por flag para permitir a replicação total
     PYTHONPATH=src python3 scripts/analyze_experiments.py
     ```
 
-Instruções e documentações de parâmetros completas estão em [reproducao.md](file:///c:/Users/walte/OneDrive/Desktop/faculdade/fundamentos_software/fundamentos-de-testes/docs/reproducao.md).
-
----
-
-## 📚 Materiais de Apresentação e Estudo
-
-Na pasta [apresentacao/](file:///c:/Users/walte/OneDrive/Desktop/faculdade/fundamentos_software/fundamentos-de-testes/apresentacao/) você encontrará:
-*   [estudo_apresentacao.md](file:///c:/Users/walte/OneDrive/Desktop/faculdade/fundamentos_software/fundamentos-de-testes/apresentacao/estudo_apresentacao.md): Um guia narrativo detalhado focado em possíveis perguntas da banca de professores e as respostas sugeridas baseadas nos dados do projeto.
