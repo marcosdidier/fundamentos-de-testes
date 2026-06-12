@@ -148,10 +148,6 @@ O Experimento v2 focou exclusivamente em formatos de saída estruturados em JSON
 | `few_shot` | 0 / 420 | **0%** |
 | `strict` | 0 / 420 | **0%** |
 
-### Lição Aprendida (v2)
-- **Saídas estruturadas garantem previsibilidade:** A imposição de formatos JSON estritos (`strict` e `few_shot`) zerou as saídas inválidas, mostrando-se indispensável para a integração estável de LLMs em fluxos de trabalho programáticos.
-- **Aprendizado em contexto (Few-Shot) reduz violações:** A estratégia `few_shot` obteve um desempenho significativamente melhor que o `strict` (5,71% vs 9,43% de violações), comprovando que fornecer exemplos reduz a instabilidade de classificação do modelo.
-- **Paráfrases reais revelam fraquezas ocultas:** O aumento de violações na v2 demonstra que testes com variações linguísticas fluidas são muito mais eficazes para expor inconsistências semânticas e fragilidades do LLM em produção.
 
 ---
 
@@ -163,7 +159,6 @@ O Experimento v2 focou exclusivamente em formatos de saída estruturados em JSON
 | :--- | :---: | :---: | :---: |
 | **Taxa de Violação Geral** | 4,71% (33/700) | **7,57% (53/700)** | **+2,86%** |
 | **Saídas Inválidas (JSON)** | 0 | **0** | — |
-| **Custo Total Estimado** | US$ 0,2087 | **US$ 0,2059** | -US$ 0,0028 |
 
 ### Taxa de Violação por Tipo de Transformação (v1 vs v2)
 
@@ -177,13 +172,6 @@ O Experimento v2 focou exclusivamente em formatos de saída estruturados em JSON
 O aumento geral nas violações metamórficas de **4,71% para 7,57%** é um **indicador positivo de qualidade do teste**. 
 
 No Experimento v1, o uso de prefixos mecânicos repetitivos criava paráfrases muito semelhantes e com forte viés de palavra-chave, facilitando a classificação. Na v2, a IA gerou sentenças fluidas, com vocabulário rico e estruturas sintáticas diversas, expondo a verdadeira sensibilidade do LLM à variação linguística natural.
-
-#### Distinção: Viés de Palavra-chave (v1) vs. Paráfrase Natural (v2)
-
-- **Paráfrase com Viés de Palavra-chave (v1):** As transformações eram geradas por meio de algoritmos de inserção de prefixos fixos e palavras explícitas. Isso mantinha a frase original intacta e repetia os termos-chave que o modelo usa como "atalhos" de decisão.
-  - *Exemplo (`cancel_order`):* A mensagem original *"Quero cancelar"* virava *"Preciso que a loja providencie o cancelamento, pois quero cancelar meu pedido"*. O termo "cancelar" aparece duas vezes e atua como um forte sinalizador (gatilho direto) que facilita a classificação correta pelo LLM.
-- **Paráfrase Natural e Fluida (v2):** As transformações foram geradas usando inteligência artificial generativa e revisadas humanamente. Elas mudam a estrutura sintática da frase e utilizam sinônimos e termos indiretos, removendo os atalhos lexicais.
-  - *Exemplo (`cancel_order`):* A mensagem original *"Quero cancelar"* virava *"Por favor, suspendam a transação que acabei de concluir"*. Note que as palavras "cancelar" ou "cancelamento" não aparecem. O modelo precisa compreender o significado semântico abstrato do ato de "suspender uma transação concluída" para mapeá-lo à intenção de cancelamento, tornando o teste muito mais rigoroso e representativo da linguagem humana real.
 
 ---
 
@@ -266,6 +254,3 @@ Esta é a parte mais rica analiticamente. As 53 violações da v2 foram investig
 - Rótulos `other` têm subjetividade inerente.
 
 ---
-
-
-*Documento gerado como material de suporte para a apresentação do projeto de Fundamentos de Teste de Software.*

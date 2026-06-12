@@ -8,7 +8,6 @@ Este documento lista os principais artefatos produzidos no projeto.
 | --- | --- | --- |
 | Backlog | `BACKLOG.md` | Planejamento por fase, decisoes, pendencias e status de execucao. |
 | PDF fonte | `Desenho_Experimental_Plano_Coleta_LLMs_1 (1).pdf` | Documento original usado como base do backlog. |
-| Pendencias | `docs/pendencias.md` | Pendencias metodologicas registradas durante o desenvolvimento. |
 
 ## Codigo
 
